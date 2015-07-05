@@ -38,7 +38,7 @@ let webVC = SwiftModalWebVC(urlString: "http://google.com")
 self.presentViewController(webVC, animated: true, completion: nil)
 ```
 
-Note: the above code to present modally uses the default `Light-Blue` theme. The other modal themes `Light-Black` and `Dark` may be using one of the following instead:
+Note: the above code to present modally uses the default `Light-Blue` theme. The other modal themes `Light-Black` and `Dark` may be chosen using one of the following instead:
 
 ```swift
 let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: "Light-Black")
