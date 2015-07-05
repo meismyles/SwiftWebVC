@@ -14,6 +14,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     var storedStatusColor: UIBarStyle?
     var buttonColor: UIColor? = nil
     var titleColor: UIColor? = nil
+    var closing: Bool! = false
     
     lazy var backBarButtonItem: UIBarButtonItem =  {
         var tempBackBarButtonItem = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCBack"),
@@ -171,28 +172,32 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
             var items: NSArray = [fixedSpace, refreshStopBarButtonItem, fixedSpace, backBarButtonItem, fixedSpace, forwardBarButtonItem, fixedSpace, actionBarButtonItem]
     
             var toolbar: UIToolbar = UIToolbar(frame: CGRectMake(0.0, 0.0, toolbarWidth, 44.0))
-            toolbar.items = items as [AnyObject]
-            if presentingViewController == nil {
-                toolbar.barTintColor = navigationController!.navigationBar.barTintColor
+            if !closing {
+                toolbar.items = items as [AnyObject]
+                if presentingViewController == nil {
+                    toolbar.barTintColor = navigationController!.navigationBar.barTintColor
+                }
+                else {
+                    toolbar.barStyle = navigationController!.navigationBar.barStyle
+                }
+                toolbar.tintColor = navigationController!.navigationBar.tintColor
             }
-            else {
-                toolbar.barStyle = navigationController!.navigationBar.barStyle
-            }
-            toolbar.tintColor = navigationController!.navigationBar.tintColor
             navigationItem.rightBarButtonItems = items.reverseObjectEnumerator().allObjects
 
         }
         else {
             var items: NSArray = [fixedSpace, backBarButtonItem, flexibleSpace, forwardBarButtonItem, flexibleSpace, refreshStopBarButtonItem, flexibleSpace, actionBarButtonItem, fixedSpace]
     
-            if presentingViewController == nil {
-                navigationController!.toolbar.barTintColor = navigationController!.navigationBar.barTintColor
+            if !closing {
+                if presentingViewController == nil {
+                    navigationController!.toolbar.barTintColor = navigationController!.navigationBar.barTintColor
+                }
+                else {
+                    navigationController!.toolbar.barStyle = navigationController!.navigationBar.barStyle
+                }
+                navigationController!.toolbar.tintColor = navigationController!.navigationBar.tintColor
+                toolbarItems = items as [AnyObject]
             }
-            else {
-                navigationController!.toolbar.barStyle = navigationController!.navigationBar.barStyle
-            }
-            navigationController!.toolbar.tintColor = navigationController!.navigationBar.tintColor
-            toolbarItems = items as [AnyObject]
         }
     }
     
@@ -270,6 +275,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     ////////////////////////////////////////////////
     
     func doneButtonTapped(sender: AnyObject) {
+        closing = true
         UINavigationBar.appearance().barStyle = storedStatusColor!
         self.dismissViewControllerAnimated(true, completion: {})
     }
