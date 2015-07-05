@@ -27,7 +27,7 @@ SwiftWebVC is a simple inline browser for your Swift iOS app.
 Just like any UIViewController, SwiftWebVC can be pushed into a UINavigationController stack:
 
 ```swift
-let webVC = SwiftModalWebVC(urlString: "http://google.com")
+let webVC = SwiftWebVC(urlString: "http://google.com")
 self.navigationController?.pushViewController(webVC, animated: true)
 ```
 
