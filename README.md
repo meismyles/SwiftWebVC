@@ -20,7 +20,7 @@ SwiftWebVC is a simple inline browser for your Swift iOS app.
 
 ## Installation
 
-* Drag the `SwiftWebVC/` folder into your project.
+* Add the `SwiftWebVC/` folder into your project.
 
 ## Usage
 
