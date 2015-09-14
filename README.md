@@ -1,5 +1,7 @@
 # SwiftWebVC
 
+**Updated for iOS 9 & Swift 2.0.**
+
 SwiftWebVC is a simple inline browser for your Swift iOS app.
 
 **Disclaimer:** SwiftWebVC is a Swift implementation of [Sam Vermette's SVWebViewController](https://github.com/samvermette/SVWebViewController/).
@@ -47,7 +49,7 @@ let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: "Dark")
 
 ### SwiftWebVCActivity
 
-Starting in iOS 6 Apple uses `UIActivity` to let you show additional sharing methods in share sheets. `SwiftWebVC` comes with "Open in Safari" and "Open in Chrome" activities. You can easily add your own activity by subclassing `SwiftWebVCActivity` which takes care of a few things automatically for you. Have a look at the Safari and Chrome activities for implementation examples.
+Starting in iOS 6 Apple uses `UIActivity` to let you show additional sharing methods in share sheets. `SwiftWebVC` comes with "Open in Safari" and "Open in Chrome" activities. You can easily add your own activity by subclassing `SwiftWebVCActivity` which takes care of a few things automatically for you. Have a look at the Safari and Chrome activities for implementation examples.Typed
 
 
 ## Credits
