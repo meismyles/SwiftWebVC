@@ -19,8 +19,8 @@ class SwiftWebVCActivity: UIActivity {
     }
         
     override func activityImage() -> UIImage {
-        var typeArray: NSArray = activityType().componentsSeparatedByString(".")
-        var type: String = typeArray[typeArray.count-1] as! String
+        let typeArray: NSArray = activityType().componentsSeparatedByString(".")
+        let type: String = typeArray[typeArray.count-1] as! String
         if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
             return UIImage(named: type+"-iPad")!
         }

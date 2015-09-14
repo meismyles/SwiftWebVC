@@ -131,7 +131,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         super.viewWillAppear(true)
         
         if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
-            self.navigationController?.setToolbarHidden(false, animated: true)
+            self.navigationController?.setToolbarHidden(false, animated: false)
         }
         else if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
             self.navigationController?.setToolbarHidden(true, animated: true)
@@ -159,21 +159,21 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         forwardBarButtonItem.enabled = webView.canGoForward
 
     
-        var refreshStopBarButtonItem: UIBarButtonItem = webView.loading ? stopBarButtonItem : refreshBarButtonItem
+        let refreshStopBarButtonItem: UIBarButtonItem = webView.loading ? stopBarButtonItem : refreshBarButtonItem
         
-        var fixedSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
-        var flexibleSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let fixedSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
+        let flexibleSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
 
         if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
     
-            var toolbarWidth: CGFloat = 250.0
+            let toolbarWidth: CGFloat = 250.0
             fixedSpace.width = 35.0
     
-            var items: NSArray = [fixedSpace, refreshStopBarButtonItem, fixedSpace, backBarButtonItem, fixedSpace, forwardBarButtonItem, fixedSpace, actionBarButtonItem]
+            let items: NSArray = [fixedSpace, refreshStopBarButtonItem, fixedSpace, backBarButtonItem, fixedSpace, forwardBarButtonItem, fixedSpace, actionBarButtonItem]
     
-            var toolbar: UIToolbar = UIToolbar(frame: CGRectMake(0.0, 0.0, toolbarWidth, 44.0))
+            let toolbar: UIToolbar = UIToolbar(frame: CGRectMake(0.0, 0.0, toolbarWidth, 44.0))
             if !closing {
-                toolbar.items = items as [AnyObject]
+                toolbar.items = items as? [UIBarButtonItem]
                 if presentingViewController == nil {
                     toolbar.barTintColor = navigationController!.navigationBar.barTintColor
                 }
@@ -182,11 +182,11 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
                 }
                 toolbar.tintColor = navigationController!.navigationBar.tintColor
             }
-            navigationItem.rightBarButtonItems = items.reverseObjectEnumerator().allObjects
+            navigationItem.rightBarButtonItems = items.reverseObjectEnumerator().allObjects as? [UIBarButtonItem]
 
         }
         else {
-            var items: NSArray = [fixedSpace, backBarButtonItem, flexibleSpace, forwardBarButtonItem, flexibleSpace, refreshStopBarButtonItem, flexibleSpace, actionBarButtonItem, fixedSpace]
+            let items: NSArray = [fixedSpace, backBarButtonItem, flexibleSpace, forwardBarButtonItem, flexibleSpace, refreshStopBarButtonItem, flexibleSpace, actionBarButtonItem, fixedSpace]
     
             if !closing {
                 if presentingViewController == nil {
@@ -196,7 +196,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
                     navigationController!.toolbar.barStyle = navigationController!.navigationBar.barStyle
                 }
                 navigationController!.toolbar.tintColor = navigationController!.navigationBar.tintColor
-                toolbarItems = items as [AnyObject]
+                toolbarItems = items as? [UIBarButtonItem]
             }
         }
     }
@@ -219,7 +219,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         updateToolbarItems()
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         updateToolbarItems()
     }
@@ -252,19 +252,19 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     func actionButtonTapped(sender: AnyObject) {
         
         if let url: NSURL = ((webView.request?.URL != nil) ? webView.request?.URL : request.URL) {
-            var activities: NSArray = [SwiftWebVCActivitySafari.new(), SwiftWebVCActivityChrome.new()]
+            let activities: NSArray = [SwiftWebVCActivitySafari(), SwiftWebVCActivityChrome()]
     
-            if url.absoluteString!.hasPrefix("file:///") {
-                var dc: UIDocumentInteractionController = UIDocumentInteractionController(URL: url)
+            if url.absoluteString.hasPrefix("file:///") {
+                let dc: UIDocumentInteractionController = UIDocumentInteractionController(URL: url)
                 dc.presentOptionsMenuFromRect(view.bounds, inView: view, animated: true)
             }
             else {
-                var activityController: UIActivityViewController = UIActivityViewController(activityItems: [url], applicationActivities: activities as [AnyObject])
+                let activityController: UIActivityViewController = UIActivityViewController(activityItems: [url], applicationActivities: activities as? [UIActivity])
     
                 if floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1 && UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
-                    var ctrl: UIPopoverPresentationController = activityController.popoverPresentationController!
+                    let ctrl: UIPopoverPresentationController = activityController.popoverPresentationController!
                     ctrl.sourceView = view
-                    ctrl.barButtonItem = sender as! UIBarButtonItem
+                    ctrl.barButtonItem = sender as? UIBarButtonItem
                 }
     
                 presentViewController(activityController, animated: true, completion: nil)
