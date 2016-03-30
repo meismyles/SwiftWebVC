@@ -35,7 +35,7 @@ class SwiftModalWebVC: UINavigationController {
         let doneButton = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCDismiss"),
                                          style: UIBarButtonItemStyle.Plain,
                                          target: webViewController,
-                                         action: Selector("doneButtonTapped:"))
+                                         action: #selector(SwiftWebVC.doneButtonTapped(_:)))
         
         switch theme {
         case "Light-Black":

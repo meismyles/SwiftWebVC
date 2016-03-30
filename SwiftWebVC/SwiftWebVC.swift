@@ -20,7 +20,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         var tempBackBarButtonItem = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCBack"),
                                                     style: UIBarButtonItemStyle.Plain,
                                                     target: self,
-                                                    action: Selector("goBackTapped:"))
+                                                    action: #selector(SwiftWebVC.goBackTapped(_:)))
         tempBackBarButtonItem.width = 18.0
         tempBackBarButtonItem.tintColor = self.buttonColor
         return tempBackBarButtonItem
@@ -30,7 +30,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         var tempForwardBarButtonItem = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCNext"),
                                                         style: UIBarButtonItemStyle.Plain,
                                                         target: self,
-                                                        action: Selector("goForwardTapped:"))
+                                                        action: #selector(SwiftWebVC.goForwardTapped(_:)))
         tempForwardBarButtonItem.width = 18.0
         tempForwardBarButtonItem.tintColor = self.buttonColor
         return tempForwardBarButtonItem
@@ -39,7 +39,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     lazy var refreshBarButtonItem: UIBarButtonItem = {
         var tempRefreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh,
                                                         target: self,
-                                                        action: Selector("reloadTapped:"))
+                                                        action: #selector(SwiftWebVC.reloadTapped(_:)))
         tempRefreshBarButtonItem.tintColor = self.buttonColor
         return tempRefreshBarButtonItem
     }()
@@ -47,7 +47,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     lazy var stopBarButtonItem: UIBarButtonItem = {
         var tempStopBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop,
                                                     target: self,
-                                                    action: Selector("stopTapped:"))
+                                                    action: #selector(SwiftWebVC.stopTapped(_:)))
         tempStopBarButtonItem.tintColor = self.buttonColor
         return tempStopBarButtonItem
     }()
@@ -55,7 +55,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     lazy var actionBarButtonItem: UIBarButtonItem = {
         var tempActionBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action,
                                                     target: self,
-                                                    action: Selector("actionButtonTapped:"))
+                                                    action: #selector(SwiftWebVC.actionButtonTapped(_:)))
         tempActionBarButtonItem.tintColor = self.buttonColor
         return tempActionBarButtonItem
     }()
