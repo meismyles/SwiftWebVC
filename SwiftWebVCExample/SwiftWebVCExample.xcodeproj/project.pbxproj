@@ -14,19 +14,19 @@
 		C261B6AF1CA9A5B9007F6A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C261B6AD1CA9A5B9007F6A49 /* LaunchScreen.storyboard */; };
 		C261B6BA1CA9A5B9007F6A49 /* SwiftWebVCExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B6B91CA9A5B9007F6A49 /* SwiftWebVCExampleTests.swift */; };
 		C261B6C51CA9A5B9007F6A49 /* SwiftWebVCExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B6C41CA9A5B9007F6A49 /* SwiftWebVCExampleUITests.swift */; };
-		C261B7151CA9AF84007F6A49 /* SwiftWebVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = C261B6FB1CA9AF84007F6A49 /* SwiftWebVC.strings */; };
-		C261B7161CA9AF84007F6A49 /* SwiftModalWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B7041CA9AF84007F6A49 /* SwiftModalWebVC.swift */; };
-		C261B7171CA9AF84007F6A49 /* SwiftWebVC.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C261B7051CA9AF84007F6A49 /* SwiftWebVC.bundle */; };
-		C261B7181CA9AF84007F6A49 /* SwiftWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B7061CA9AF84007F6A49 /* SwiftWebVC.swift */; };
-		C261B7191CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = C261B7091CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad.png */; };
-		C261B71A1CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261B70A1CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad@2x.png */; };
-		C261B71B1CA9AF84007F6A49 /* SwiftWebVCActivityChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B70B1CA9AF84007F6A49 /* SwiftWebVCActivityChrome.swift */; };
-		C261B71C1CA9AF84007F6A49 /* SwiftWebVCActivityChrome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261B70C1CA9AF84007F6A49 /* SwiftWebVCActivityChrome@2x.png */; };
-		C261B71D1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = C261B70E1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad.png */; };
-		C261B71E1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261B70F1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad@2x.png */; };
-		C261B71F1CA9AF84007F6A49 /* SwiftWebVCActivitySafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B7101CA9AF84007F6A49 /* SwiftWebVCActivitySafari.swift */; };
-		C261B7201CA9AF84007F6A49 /* SwiftWebVCActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C261B7111CA9AF84007F6A49 /* SwiftWebVCActivitySafari@2x.png */; };
-		C261B7211CA9AF84007F6A49 /* SwiftWebVCActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B7121CA9AF84007F6A49 /* SwiftWebVCActivity.swift */; };
+		EF2EDE541D43E5980012A147 /* SwiftWebVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE391D43E5980012A147 /* SwiftWebVC.strings */; };
+		EF2EDE551D43E5980012A147 /* SwiftModalWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE421D43E5980012A147 /* SwiftModalWebVC.swift */; };
+		EF2EDE561D43E5980012A147 /* SwiftWebVC.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE431D43E5980012A147 /* SwiftWebVC.bundle */; };
+		EF2EDE571D43E5980012A147 /* SwiftWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE441D43E5980012A147 /* SwiftWebVC.swift */; };
+		EF2EDE581D43E5980012A147 /* SwiftWebVCActivityChrome-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE471D43E5980012A147 /* SwiftWebVCActivityChrome-iPad.png */; };
+		EF2EDE591D43E5980012A147 /* SwiftWebVCActivityChrome-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE481D43E5980012A147 /* SwiftWebVCActivityChrome-iPad@2x.png */; };
+		EF2EDE5A1D43E5980012A147 /* SwiftWebVCActivityChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE491D43E5980012A147 /* SwiftWebVCActivityChrome.swift */; };
+		EF2EDE5B1D43E5980012A147 /* SwiftWebVCActivityChrome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE4A1D43E5980012A147 /* SwiftWebVCActivityChrome@2x.png */; };
+		EF2EDE5C1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE4C1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad.png */; };
+		EF2EDE5D1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE4D1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad@2x.png */; };
+		EF2EDE5E1D43E5980012A147 /* SwiftWebVCActivitySafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE4E1D43E5980012A147 /* SwiftWebVCActivitySafari.swift */; };
+		EF2EDE5F1D43E5980012A147 /* SwiftWebVCActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE4F1D43E5980012A147 /* SwiftWebVCActivitySafari@2x.png */; };
+		EF2EDE601D43E5980012A147 /* SwiftWebVCActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE501D43E5980012A147 /* SwiftWebVCActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,28 +60,29 @@
 		C261B6C01CA9A5B9007F6A49 /* SwiftWebVCExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftWebVCExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C261B6C41CA9A5B9007F6A49 /* SwiftWebVCExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebVCExampleUITests.swift; sourceTree = "<group>"; };
 		C261B6C61CA9A5B9007F6A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C261B6FC1CA9AF84007F6A49 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		C261B6FD1CA9AF84007F6A49 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		C261B6FE1CA9AF84007F6A49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		C261B6FF1CA9AF84007F6A49 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
-		C261B7001CA9AF84007F6A49 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		C261B7011CA9AF84007F6A49 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		C261B7021CA9AF84007F6A49 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		C261B7031CA9AF84007F6A49 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		C261B7041CA9AF84007F6A49 /* SwiftModalWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftModalWebVC.swift; sourceTree = "<group>"; };
-		C261B7051CA9AF84007F6A49 /* SwiftWebVC.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftWebVC.bundle; sourceTree = "<group>"; };
-		C261B7061CA9AF84007F6A49 /* SwiftWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVC.swift; sourceTree = "<group>"; };
-		C261B7091CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivityChrome-iPad.png"; sourceTree = "<group>"; };
-		C261B70A1CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivityChrome-iPad@2x.png"; sourceTree = "<group>"; };
-		C261B70B1CA9AF84007F6A49 /* SwiftWebVCActivityChrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivityChrome.swift; sourceTree = "<group>"; };
-		C261B70C1CA9AF84007F6A49 /* SwiftWebVCActivityChrome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivityChrome@2x.png"; sourceTree = "<group>"; };
-		C261B70E1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivitySafari-iPad.png"; sourceTree = "<group>"; };
-		C261B70F1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivitySafari-iPad@2x.png"; sourceTree = "<group>"; };
-		C261B7101CA9AF84007F6A49 /* SwiftWebVCActivitySafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivitySafari.swift; sourceTree = "<group>"; };
-		C261B7111CA9AF84007F6A49 /* SwiftWebVCActivitySafari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivitySafari@2x.png"; sourceTree = "<group>"; };
-		C261B7121CA9AF84007F6A49 /* SwiftWebVCActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivity.swift; sourceTree = "<group>"; };
-		C261B7131CA9AF84007F6A49 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
-		C261B7141CA9AF84007F6A49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		EF2EDE3A1D43E5980012A147 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		EF2EDE3B1D43E5980012A147 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		EF2EDE3C1D43E5980012A147 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		EF2EDE3D1D43E5980012A147 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		EF2EDE3E1D43E5980012A147 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		EF2EDE3F1D43E5980012A147 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		EF2EDE401D43E5980012A147 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		EF2EDE411D43E5980012A147 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		EF2EDE421D43E5980012A147 /* SwiftModalWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftModalWebVC.swift; sourceTree = "<group>"; };
+		EF2EDE431D43E5980012A147 /* SwiftWebVC.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftWebVC.bundle; sourceTree = "<group>"; };
+		EF2EDE441D43E5980012A147 /* SwiftWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVC.swift; sourceTree = "<group>"; };
+		EF2EDE471D43E5980012A147 /* SwiftWebVCActivityChrome-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivityChrome-iPad.png"; sourceTree = "<group>"; };
+		EF2EDE481D43E5980012A147 /* SwiftWebVCActivityChrome-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivityChrome-iPad@2x.png"; sourceTree = "<group>"; };
+		EF2EDE491D43E5980012A147 /* SwiftWebVCActivityChrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivityChrome.swift; sourceTree = "<group>"; };
+		EF2EDE4A1D43E5980012A147 /* SwiftWebVCActivityChrome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivityChrome@2x.png"; sourceTree = "<group>"; };
+		EF2EDE4C1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivitySafari-iPad.png"; sourceTree = "<group>"; };
+		EF2EDE4D1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivitySafari-iPad@2x.png"; sourceTree = "<group>"; };
+		EF2EDE4E1D43E5980012A147 /* SwiftWebVCActivitySafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivitySafari.swift; sourceTree = "<group>"; };
+		EF2EDE4F1D43E5980012A147 /* SwiftWebVCActivitySafari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftWebVCActivitySafari@2x.png"; sourceTree = "<group>"; };
+		EF2EDE501D43E5980012A147 /* SwiftWebVCActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivity.swift; sourceTree = "<group>"; };
+		EF2EDE511D43E5980012A147 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		EF2EDE521D43E5980012A147 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		EF2EDE531D43E5980012A147 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +113,7 @@
 		C261B6981CA9A5B9007F6A49 = {
 			isa = PBXGroup;
 			children = (
-				C261B6FA1CA9AF84007F6A49 /* SwiftWebVC */,
+				EF2EDE381D43E5980012A147 /* SwiftWebVC */,
 				C261B6A31CA9A5B9007F6A49 /* SwiftWebVCExample */,
 				C261B6B81CA9A5B9007F6A49 /* SwiftWebVCExampleTests */,
 				C261B6C31CA9A5B9007F6A49 /* SwiftWebVCExampleUITests */,
@@ -161,47 +162,47 @@
 			path = SwiftWebVCExampleUITests;
 			sourceTree = "<group>";
 		};
-		C261B6FA1CA9AF84007F6A49 /* SwiftWebVC */ = {
+		EF2EDE381D43E5980012A147 /* SwiftWebVC */ = {
 			isa = PBXGroup;
 			children = (
-				C261B6FB1CA9AF84007F6A49 /* SwiftWebVC.strings */,
-				C261B7041CA9AF84007F6A49 /* SwiftModalWebVC.swift */,
-				C261B7051CA9AF84007F6A49 /* SwiftWebVC.bundle */,
-				C261B7061CA9AF84007F6A49 /* SwiftWebVC.swift */,
-				C261B7071CA9AF84007F6A49 /* UIActivities */,
+				EF2EDE391D43E5980012A147 /* SwiftWebVC.strings */,
+				EF2EDE421D43E5980012A147 /* SwiftModalWebVC.swift */,
+				EF2EDE431D43E5980012A147 /* SwiftWebVC.bundle */,
+				EF2EDE441D43E5980012A147 /* SwiftWebVC.swift */,
+				EF2EDE451D43E5980012A147 /* UIActivities */,
 			);
 			name = SwiftWebVC;
 			path = ../SwiftWebVC;
 			sourceTree = "<group>";
 		};
-		C261B7071CA9AF84007F6A49 /* UIActivities */ = {
+		EF2EDE451D43E5980012A147 /* UIActivities */ = {
 			isa = PBXGroup;
 			children = (
-				C261B7081CA9AF84007F6A49 /* Chrome */,
-				C261B70D1CA9AF84007F6A49 /* Safari */,
-				C261B7121CA9AF84007F6A49 /* SwiftWebVCActivity.swift */,
+				EF2EDE461D43E5980012A147 /* Chrome */,
+				EF2EDE4B1D43E5980012A147 /* Safari */,
+				EF2EDE501D43E5980012A147 /* SwiftWebVCActivity.swift */,
 			);
 			path = UIActivities;
 			sourceTree = "<group>";
 		};
-		C261B7081CA9AF84007F6A49 /* Chrome */ = {
+		EF2EDE461D43E5980012A147 /* Chrome */ = {
 			isa = PBXGroup;
 			children = (
-				C261B7091CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad.png */,
-				C261B70A1CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad@2x.png */,
-				C261B70B1CA9AF84007F6A49 /* SwiftWebVCActivityChrome.swift */,
-				C261B70C1CA9AF84007F6A49 /* SwiftWebVCActivityChrome@2x.png */,
+				EF2EDE471D43E5980012A147 /* SwiftWebVCActivityChrome-iPad.png */,
+				EF2EDE481D43E5980012A147 /* SwiftWebVCActivityChrome-iPad@2x.png */,
+				EF2EDE491D43E5980012A147 /* SwiftWebVCActivityChrome.swift */,
+				EF2EDE4A1D43E5980012A147 /* SwiftWebVCActivityChrome@2x.png */,
 			);
 			path = Chrome;
 			sourceTree = "<group>";
 		};
-		C261B70D1CA9AF84007F6A49 /* Safari */ = {
+		EF2EDE4B1D43E5980012A147 /* Safari */ = {
 			isa = PBXGroup;
 			children = (
-				C261B70E1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad.png */,
-				C261B70F1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad@2x.png */,
-				C261B7101CA9AF84007F6A49 /* SwiftWebVCActivitySafari.swift */,
-				C261B7111CA9AF84007F6A49 /* SwiftWebVCActivitySafari@2x.png */,
+				EF2EDE4C1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad.png */,
+				EF2EDE4D1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad@2x.png */,
+				EF2EDE4E1D43E5980012A147 /* SwiftWebVCActivitySafari.swift */,
+				EF2EDE4F1D43E5980012A147 /* SwiftWebVCActivitySafari@2x.png */,
 			);
 			path = Safari;
 			sourceTree = "<group>";
@@ -301,6 +302,7 @@
 				pt,
 				"zh-Hans",
 				"zh-Hant",
+				vi,
 			);
 			mainGroup = C261B6981CA9A5B9007F6A49;
 			productRefGroup = C261B6A21CA9A5B9007F6A49 /* Products */;
@@ -321,14 +323,14 @@
 			files = (
 				C261B6AF1CA9A5B9007F6A49 /* LaunchScreen.storyboard in Resources */,
 				C261B6AC1CA9A5B9007F6A49 /* Assets.xcassets in Resources */,
-				C261B7191CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad.png in Resources */,
-				C261B71C1CA9AF84007F6A49 /* SwiftWebVCActivityChrome@2x.png in Resources */,
-				C261B71A1CA9AF84007F6A49 /* SwiftWebVCActivityChrome-iPad@2x.png in Resources */,
-				C261B71D1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad.png in Resources */,
-				C261B7171CA9AF84007F6A49 /* SwiftWebVC.bundle in Resources */,
-				C261B7201CA9AF84007F6A49 /* SwiftWebVCActivitySafari@2x.png in Resources */,
-				C261B71E1CA9AF84007F6A49 /* SwiftWebVCActivitySafari-iPad@2x.png in Resources */,
-				C261B7151CA9AF84007F6A49 /* SwiftWebVC.strings in Resources */,
+				EF2EDE581D43E5980012A147 /* SwiftWebVCActivityChrome-iPad.png in Resources */,
+				EF2EDE5B1D43E5980012A147 /* SwiftWebVCActivityChrome@2x.png in Resources */,
+				EF2EDE591D43E5980012A147 /* SwiftWebVCActivityChrome-iPad@2x.png in Resources */,
+				EF2EDE5C1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad.png in Resources */,
+				EF2EDE561D43E5980012A147 /* SwiftWebVC.bundle in Resources */,
+				EF2EDE5F1D43E5980012A147 /* SwiftWebVCActivitySafari@2x.png in Resources */,
+				EF2EDE5D1D43E5980012A147 /* SwiftWebVCActivitySafari-iPad@2x.png in Resources */,
+				EF2EDE541D43E5980012A147 /* SwiftWebVC.strings in Resources */,
 				C261B6AA1CA9A5B9007F6A49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,13 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C261B71F1CA9AF84007F6A49 /* SwiftWebVCActivitySafari.swift in Sources */,
-				C261B71B1CA9AF84007F6A49 /* SwiftWebVCActivityChrome.swift in Sources */,
-				C261B7161CA9AF84007F6A49 /* SwiftModalWebVC.swift in Sources */,
-				C261B7211CA9AF84007F6A49 /* SwiftWebVCActivity.swift in Sources */,
+				EF2EDE5E1D43E5980012A147 /* SwiftWebVCActivitySafari.swift in Sources */,
+				EF2EDE5A1D43E5980012A147 /* SwiftWebVCActivityChrome.swift in Sources */,
+				EF2EDE551D43E5980012A147 /* SwiftModalWebVC.swift in Sources */,
+				EF2EDE601D43E5980012A147 /* SwiftWebVCActivity.swift in Sources */,
 				C261B6A71CA9A5B9007F6A49 /* ViewController.swift in Sources */,
 				C261B6A51CA9A5B9007F6A49 /* AppDelegate.swift in Sources */,
-				C261B7181CA9AF84007F6A49 /* SwiftWebVC.swift in Sources */,
+				EF2EDE571D43E5980012A147 /* SwiftWebVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,19 +414,20 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		C261B6FB1CA9AF84007F6A49 /* SwiftWebVC.strings */ = {
+		EF2EDE391D43E5980012A147 /* SwiftWebVC.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C261B6FC1CA9AF84007F6A49 /* da */,
-				C261B6FD1CA9AF84007F6A49 /* de */,
-				C261B6FE1CA9AF84007F6A49 /* en */,
-				C261B6FF1CA9AF84007F6A49 /* es-ES */,
-				C261B7001CA9AF84007F6A49 /* es */,
-				C261B7011CA9AF84007F6A49 /* fr */,
-				C261B7021CA9AF84007F6A49 /* ja */,
-				C261B7031CA9AF84007F6A49 /* pt */,
-				C261B7131CA9AF84007F6A49 /* zh-Hans */,
-				C261B7141CA9AF84007F6A49 /* zh-Hant */,
+				EF2EDE3A1D43E5980012A147 /* da */,
+				EF2EDE3B1D43E5980012A147 /* de */,
+				EF2EDE3C1D43E5980012A147 /* en */,
+				EF2EDE3D1D43E5980012A147 /* es-ES */,
+				EF2EDE3E1D43E5980012A147 /* es */,
+				EF2EDE3F1D43E5980012A147 /* fr */,
+				EF2EDE401D43E5980012A147 /* ja */,
+				EF2EDE411D43E5980012A147 /* pt */,
+				EF2EDE511D43E5980012A147 /* vi */,
+				EF2EDE521D43E5980012A147 /* zh-Hans */,
+				EF2EDE531D43E5980012A147 /* zh-Hant */,
 			);
 			name = SwiftWebVC.strings;
 			sourceTree = "<group>";

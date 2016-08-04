@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,7 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0P-eB-vT5">
+                                <rect key="frame" x="172" y="286" width="257" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Open Google.com With Light Black Theme"/>
+                                <connections>
+                                    <action selector="presentWithLightBlackTheme" destination="BYZ-38-t0r" eventType="touchUpInside" id="ID8-wc-Ex9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvZ-Ht-z2R">
+                                <rect key="frame" x="191" y="334" width="218" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Open Google.com With Dark Theme"/>
+                                <connections>
+                                    <action selector="presentWithDarkTheme" destination="BYZ-38-t0r" eventType="touchUpInside" id="VgS-Gt-270"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r74-NC-6Va">
+                                <rect key="frame" x="147" y="238" width="307" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Open Google.com With Default Theme (Light Blue)"/>
+                                <connections>
+                                    <action selector="presentWithDefaultTheme" destination="BYZ-38-t0r" eventType="touchUpInside" id="mlj-8m-Bec"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H0P-eB-vT5" firstAttribute="top" secondItem="r74-NC-6Va" secondAttribute="bottom" constant="20" id="BVQ-20-LJt"/>
+                            <constraint firstItem="H0P-eB-vT5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L1S-nq-X7C"/>
+                            <constraint firstItem="r74-NC-6Va" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sfw-go-NSL"/>
+                            <constraint firstItem="H0P-eB-vT5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UC2-gl-fDk"/>
+                            <constraint firstItem="SvZ-Ht-z2R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W04-if-WMX"/>
+                            <constraint firstItem="SvZ-Ht-z2R" firstAttribute="top" secondItem="H0P-eB-vT5" secondAttribute="bottom" constant="20" id="lgo-0G-vvk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,26 +10,30 @@ import UIKit
 
 class SwiftModalWebVC: UINavigationController {
     
+    enum SwiftModalWebVCTheme {
+        case lightBlue, lightBlack, dark
+    }
+    
     weak var webViewDelegate: UIWebViewDelegate? = nil
     var webViewController: SwiftWebVC!
     
     convenience init(urlString: String) {
-        self.init(pageURL: NSURL(string: urlString)!, theme: "Light-Blue")
+        self.init(pageURL: NSURL(string: urlString)!)
     }
     
-    convenience init(urlString: String, theme: String) {
+    convenience init(urlString: String, theme: SwiftModalWebVCTheme) {
         self.init(pageURL: NSURL(string: urlString)!, theme: theme)
     }
     
     convenience init(pageURL: NSURL) {
-        self.init(request: NSURLRequest(URL: pageURL), theme: "Light-Blue")
+        self.init(request: NSURLRequest(URL: pageURL))
     }
     
-    convenience init(pageURL: NSURL, theme: String) {
+    convenience init(pageURL: NSURL, theme: SwiftModalWebVCTheme) {
         self.init(request: NSURLRequest(URL: pageURL), theme: theme)
     }
     
-    init(request: NSURLRequest, theme: String) {
+    init(request: NSURLRequest, theme: SwiftModalWebVCTheme = .lightBlue) {
         webViewController = SwiftWebVC(aRequest: request)
         webViewController.storedStatusColor = UINavigationBar.appearance().barStyle
         let doneButton = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCDismiss"),
@@ -38,21 +42,21 @@ class SwiftModalWebVC: UINavigationController {
                                          action: #selector(SwiftWebVC.doneButtonTapped(_:)))
         
         switch theme {
-        case "Light-Black":
-            doneButton.tintColor = UIColor.darkGrayColor()
-            webViewController.buttonColor = UIColor.darkGrayColor()
-            webViewController.titleColor = UIColor.blackColor()
-            UINavigationBar.appearance().barStyle = UIBarStyle.Default
-        case "Dark":
-            doneButton.tintColor = UIColor.whiteColor()
-            webViewController.buttonColor = UIColor.whiteColor()
-            webViewController.titleColor = UIColor.groupTableViewBackgroundColor()
-            UINavigationBar.appearance().barStyle = UIBarStyle.Black
-        default:
+        case .lightBlue:
             doneButton.tintColor = nil
             webViewController.buttonColor = nil
             webViewController.titleColor = UIColor.blackColor()
             UINavigationBar.appearance().barStyle = UIBarStyle.Default
+        case .lightBlack:
+            doneButton.tintColor = UIColor.darkGrayColor()
+            webViewController.buttonColor = UIColor.darkGrayColor()
+            webViewController.titleColor = UIColor.blackColor()
+            UINavigationBar.appearance().barStyle = UIBarStyle.Default
+        case .dark:
+            doneButton.tintColor = UIColor.whiteColor()
+            webViewController.buttonColor = UIColor.whiteColor()
+            webViewController.titleColor = UIColor.groupTableViewBackgroundColor()
+            UINavigationBar.appearance().barStyle = UIBarStyle.Black
         }
         
         if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
