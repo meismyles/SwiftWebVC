@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530722A0FE2752E75DA6D9C0 /* Pods_SwiftWebVCExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030A19D132E49BF772129FAA /* Pods_SwiftWebVCExampleTests.framework */; };
+		5BB157D73F106675800988A5 /* Pods_SwiftWebVCExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD631A1F29BB9D255298BE5 /* Pods_SwiftWebVCExample.framework */; };
 		C261B6A51CA9A5B9007F6A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B6A41CA9A5B9007F6A49 /* AppDelegate.swift */; };
 		C261B6A71CA9A5B9007F6A49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B6A61CA9A5B9007F6A49 /* ViewController.swift */; };
 		C261B6AA1CA9A5B9007F6A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C261B6A81CA9A5B9007F6A49 /* Main.storyboard */; };
@@ -47,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030A19D132E49BF772129FAA /* Pods_SwiftWebVCExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWebVCExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19DF013BF6509E5CDA77AD1B /* Pods-SwiftWebVCExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWebVCExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWebVCExample/Pods-SwiftWebVCExample.release.xcconfig"; sourceTree = "<group>"; };
+		2195F96F30840F46C6025E4E /* Pods-SwiftWebVCExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWebVCExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWebVCExampleTests/Pods-SwiftWebVCExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B904931E7C6226C341F4940 /* Pods-SwiftWebVCExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWebVCExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWebVCExample/Pods-SwiftWebVCExample.debug.xcconfig"; sourceTree = "<group>"; };
+		6194AE154F7C6C07551866CB /* Pods-SwiftWebVCExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWebVCExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWebVCExampleTests/Pods-SwiftWebVCExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		7AD631A1F29BB9D255298BE5 /* Pods_SwiftWebVCExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWebVCExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C261B6A11CA9A5B9007F6A49 /* SwiftWebVCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWebVCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C261B6A41CA9A5B9007F6A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C261B6A61CA9A5B9007F6A49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB157D73F106675800988A5 /* Pods_SwiftWebVCExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530722A0FE2752E75DA6D9C0 /* Pods_SwiftWebVCExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +120,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E5721FE17F879B6BC722F24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B904931E7C6226C341F4940 /* Pods-SwiftWebVCExample.debug.xcconfig */,
+				19DF013BF6509E5CDA77AD1B /* Pods-SwiftWebVCExample.release.xcconfig */,
+				2195F96F30840F46C6025E4E /* Pods-SwiftWebVCExampleTests.debug.xcconfig */,
+				6194AE154F7C6C07551866CB /* Pods-SwiftWebVCExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C261B6981CA9A5B9007F6A49 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +139,8 @@
 				C261B6B81CA9A5B9007F6A49 /* SwiftWebVCExampleTests */,
 				C261B6C31CA9A5B9007F6A49 /* SwiftWebVCExampleUITests */,
 				C261B6A21CA9A5B9007F6A49 /* Products */,
+				9E5721FE17F879B6BC722F24 /* Pods */,
+				D2EF76E248F3DFBE532BABCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +183,15 @@
 				C261B6C61CA9A5B9007F6A49 /* Info.plist */,
 			);
 			path = SwiftWebVCExampleUITests;
+			sourceTree = "<group>";
+		};
+		D2EF76E248F3DFBE532BABCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AD631A1F29BB9D255298BE5 /* Pods_SwiftWebVCExample.framework */,
+				030A19D132E49BF772129FAA /* Pods_SwiftWebVCExampleTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EF2EDE381D43E5980012A147 /* SwiftWebVC */ = {
@@ -214,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C261B6C91CA9A5B9007F6A49 /* Build configuration list for PBXNativeTarget "SwiftWebVCExample" */;
 			buildPhases = (
+				FDA930D879FF2E115D19A248 /* [CP] Check Pods Manifest.lock */,
 				C261B69D1CA9A5B9007F6A49 /* Sources */,
 				C261B69E1CA9A5B9007F6A49 /* Frameworks */,
 				C261B69F1CA9A5B9007F6A49 /* Resources */,
+				E4FFA9634C88C9578B6D332F /* [CP] Embed Pods Frameworks */,
+				1EC6EAD2DF72AE2D6A43B6F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C261B6CC1CA9A5B9007F6A49 /* Build configuration list for PBXNativeTarget "SwiftWebVCExampleTests" */;
 			buildPhases = (
+				2E1659352EBA78567640E482 /* [CP] Check Pods Manifest.lock */,
 				C261B6B11CA9A5B9007F6A49 /* Sources */,
 				C261B6B21CA9A5B9007F6A49 /* Frameworks */,
 				C261B6B31CA9A5B9007F6A49 /* Resources */,
+				DDEBEFCE722E2280C18D577B /* [CP] Embed Pods Frameworks */,
+				C26F36B2F002FEC79F24AC0A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,6 +391,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EC6EAD2DF72AE2D6A43B6F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWebVCExample/Pods-SwiftWebVCExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E1659352EBA78567640E482 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C26F36B2F002FEC79F24AC0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWebVCExampleTests/Pods-SwiftWebVCExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDEBEFCE722E2280C18D577B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWebVCExampleTests/Pods-SwiftWebVCExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4FFA9634C88C9578B6D332F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWebVCExample/Pods-SwiftWebVCExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDA930D879FF2E115D19A248 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C261B69D1CA9A5B9007F6A49 /* Sources */ = {
@@ -523,6 +654,7 @@
 		};
 		C261B6CA1CA9A5B9007F6A49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B904931E7C6226C341F4940 /* Pods-SwiftWebVCExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftWebVCExample/Info.plist;
@@ -535,6 +667,7 @@
 		};
 		C261B6CB1CA9A5B9007F6A49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19DF013BF6509E5CDA77AD1B /* Pods-SwiftWebVCExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftWebVCExample/Info.plist;
@@ -547,6 +680,7 @@
 		};
 		C261B6CD1CA9A5B9007F6A49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2195F96F30840F46C6025E4E /* Pods-SwiftWebVCExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SwiftWebVCExampleTests/Info.plist;
@@ -560,6 +694,7 @@
 		};
 		C261B6CE1CA9A5B9007F6A49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6194AE154F7C6C07551866CB /* Pods-SwiftWebVCExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SwiftWebVCExampleTests/Info.plist;

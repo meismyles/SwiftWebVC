@@ -1,0 +1,16 @@
+PODS:
+  - SwiftWebVC (0.1.0)
+
+DEPENDENCIES:
+  - SwiftWebVC (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftWebVC:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SwiftWebVC: 85bfb6abc44ce71b2b68dd2fcd1c4b009df313a9
+
+PODFILE CHECKSUM: 23401e2c97360a887bb6733af9d8c5922e40916b
+
+COCOAPODS: 1.1.0.rc.2

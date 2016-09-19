@@ -22,6 +22,17 @@ SwiftWebVC is a simple inline browser for your Swift iOS app.
 
 ## Installation
 
+**CocoaPods**
+
+* SwiftWebVC is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'SwiftWebVC'
+```
+
+**Manual**
+
 * Add the `SwiftWebVC/` folder into your project.
 
 ## Usage

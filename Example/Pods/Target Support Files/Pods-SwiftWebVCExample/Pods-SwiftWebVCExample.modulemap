@@ -1,0 +1,6 @@
+framework module Pods_SwiftWebVCExample {
+  umbrella header "Pods-SwiftWebVCExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
