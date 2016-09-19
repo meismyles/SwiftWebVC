@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SwiftWebVC: UIViewController, UIWebViewDelegate {
- 
+public class SwiftWebVC: UIViewController, UIWebViewDelegate {
+    
     weak var delegate: UIWebViewDelegate? = nil
     var storedStatusColor: UIBarStyle?
     var buttonColor: UIColor? = nil
@@ -28,18 +28,18 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     
     lazy var forwardBarButtonItem: UIBarButtonItem =  {
         var tempForwardBarButtonItem = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCNext"),
-                                                        style: UIBarButtonItemStyle.plain,
-                                                        target: self,
-                                                        action: #selector(SwiftWebVC.goForwardTapped(_:)))
+                                                       style: UIBarButtonItemStyle.plain,
+                                                       target: self,
+                                                       action: #selector(SwiftWebVC.goForwardTapped(_:)))
         tempForwardBarButtonItem.width = 18.0
         tempForwardBarButtonItem.tintColor = self.buttonColor
         return tempForwardBarButtonItem
-        }()
+    }()
     
     lazy var refreshBarButtonItem: UIBarButtonItem = {
         var tempRefreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh,
-                                                        target: self,
-                                                        action: #selector(SwiftWebVC.reloadTapped(_:)))
+                                                       target: self,
+                                                       action: #selector(SwiftWebVC.reloadTapped(_:)))
         tempRefreshBarButtonItem.tintColor = self.buttonColor
         return tempRefreshBarButtonItem
     }()
@@ -54,8 +54,8 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     
     lazy var actionBarButtonItem: UIBarButtonItem = {
         var tempActionBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action,
-                                                    target: self,
-                                                    action: #selector(SwiftWebVC.actionButtonTapped(_:)))
+                                                      target: self,
+                                                      action: #selector(SwiftWebVC.actionButtonTapped(_:)))
         tempActionBarButtonItem.tintColor = self.buttonColor
         return tempActionBarButtonItem
     }()
@@ -81,15 +81,15 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         delegate = nil;
     }
     
-    convenience init(urlString: String) {
+    public convenience init(urlString: String) {
         self.init(pageURL: URL(string: urlString)!)
     }
     
-    convenience init(pageURL: URL) {
+    public convenience init(pageURL: URL) {
         self.init(aRequest: URLRequest(url: pageURL))
     }
     
-    convenience init(aRequest: URLRequest) {
+    public convenience init(aRequest: URLRequest) {
         self.init()
         self.request = aRequest
     }
@@ -101,24 +101,25 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     ////////////////////////////////////////////////
     // View Lifecycle
     
-    override func loadView() {
+    override public func loadView() {
         view = webView
         loadRequest(request)
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         updateToolbarItems()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         assert(self.navigationController != nil, "SVWebViewController needs to be contained in a UINavigationController. If you are presenting SVWebViewController modally, use SVModalWebViewController instead.")
         
         navBarTitle = UILabel()
         navBarTitle.backgroundColor = UIColor.clear
         if presentingViewController == nil {
-            let titleAttributes = navigationController!.navigationBar.titleTextAttributes! as NSDictionary
-            navBarTitle.textColor = titleAttributes.object(forKey: "NSColor")! as! UIColor
+            if let titleAttributes = navigationController!.navigationBar.titleTextAttributes {
+                navBarTitle.textColor = titleAttributes["NSColor"] as! UIColor
+            }
         }
         else {
             navBarTitle.textColor = self.titleColor
@@ -138,7 +139,7 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone) {
@@ -146,31 +147,31 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override public func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
-
+    
     ////////////////////////////////////////////////
     // Toolbar
     
     func updateToolbarItems() {
         backBarButtonItem.isEnabled = webView.canGoBack
         forwardBarButtonItem.isEnabled = webView.canGoForward
-
-    
+        
+        
         let refreshStopBarButtonItem: UIBarButtonItem = webView.isLoading ? stopBarButtonItem : refreshBarButtonItem
         
         let fixedSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
         let flexibleSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-
+        
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
-    
+            
             let toolbarWidth: CGFloat = 250.0
             fixedSpace.width = 35.0
-    
+            
             let items: NSArray = [fixedSpace, refreshStopBarButtonItem, fixedSpace, backBarButtonItem, fixedSpace, forwardBarButtonItem, fixedSpace, actionBarButtonItem]
-    
+            
             let toolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: toolbarWidth, height: 44.0))
             if !closing {
                 toolbar.items = items as? [UIBarButtonItem]
@@ -183,11 +184,11 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
                 toolbar.tintColor = navigationController!.navigationBar.tintColor
             }
             navigationItem.rightBarButtonItems = items.reverseObjectEnumerator().allObjects as? [UIBarButtonItem]
-
+            
         }
         else {
             let items: NSArray = [fixedSpace, backBarButtonItem, flexibleSpace, forwardBarButtonItem, flexibleSpace, refreshStopBarButtonItem, flexibleSpace, actionBarButtonItem, fixedSpace]
-    
+            
             if !closing {
                 if presentingViewController == nil {
                     navigationController!.toolbar.barTintColor = navigationController!.navigationBar.barTintColor
@@ -204,30 +205,30 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
     ////////////////////////////////////////////////
     // UIWebViewDelegate
     
-    func webViewDidStartLoad(_ webView: UIWebView) {
+    public func webViewDidStartLoad(_ webView: UIWebView) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         updateToolbarItems()
     }
     
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    public func webViewDidFinishLoad(_ webView: UIWebView) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-    
+        
         navBarTitle.text = webView.stringByEvaluatingJavaScript(from: "document.title")
         navBarTitle.sizeToFit()
-    
+        
         updateToolbarItems()
     }
     
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+    public func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         updateToolbarItems()
     }
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         return true;
     }
-
+    
     
     ////////////////////////////////////////////////
     // Target Actions
@@ -253,20 +254,20 @@ class SwiftWebVC: UIViewController, UIWebViewDelegate {
         
         if let url: URL = ((webView.request?.url != nil) ? webView.request?.url : request.url) {
             let activities: NSArray = [SwiftWebVCActivitySafari(), SwiftWebVCActivityChrome()]
-    
+            
             if url.absoluteString.hasPrefix("file:///") {
                 let dc: UIDocumentInteractionController = UIDocumentInteractionController(url: url)
                 dc.presentOptionsMenu(from: view.bounds, in: view, animated: true)
             }
             else {
                 let activityController: UIActivityViewController = UIActivityViewController(activityItems: [url], applicationActivities: activities as? [UIActivity])
-    
+                
                 if floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1 && UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
                     let ctrl: UIPopoverPresentationController = activityController.popoverPresentationController!
                     ctrl.sourceView = view
                     ctrl.barButtonItem = sender as? UIBarButtonItem
                 }
-    
+                
                 present(activityController, animated: true, completion: nil)
             }
         }

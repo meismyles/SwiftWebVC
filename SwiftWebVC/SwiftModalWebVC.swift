@@ -8,32 +8,32 @@
 
 import UIKit
 
-class SwiftModalWebVC: UINavigationController {
+public class SwiftModalWebVC: UINavigationController {
     
-    enum SwiftModalWebVCTheme {
+    public enum SwiftModalWebVCTheme {
         case lightBlue, lightBlack, dark
     }
     
     weak var webViewDelegate: UIWebViewDelegate? = nil
     var webViewController: SwiftWebVC!
     
-    convenience init(urlString: String) {
+    public convenience init(urlString: String) {
         self.init(pageURL: URL(string: urlString)!)
     }
     
-    convenience init(urlString: String, theme: SwiftModalWebVCTheme) {
+    public convenience init(urlString: String, theme: SwiftModalWebVCTheme) {
         self.init(pageURL: URL(string: urlString)!, theme: theme)
     }
     
-    convenience init(pageURL: URL) {
+    public convenience init(pageURL: URL) {
         self.init(request: URLRequest(url: pageURL))
     }
     
-    convenience init(pageURL: URL, theme: SwiftModalWebVCTheme) {
+    public convenience init(pageURL: URL, theme: SwiftModalWebVCTheme) {
         self.init(request: URLRequest(url: pageURL), theme: theme)
     }
     
-    init(request: URLRequest, theme: SwiftModalWebVCTheme = .lightBlue) {
+    public init(request: URLRequest, theme: SwiftModalWebVCTheme = .lightBlue) {
         webViewController = SwiftWebVC(aRequest: request)
         webViewController.storedStatusColor = UINavigationBar.appearance().barStyle
         let doneButton = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCDismiss"),
@@ -71,13 +71,13 @@ class SwiftModalWebVC: UINavigationController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
- 
-    required init(coder aDecoder: NSCoder) {
+    
+    required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
-    override func viewWillAppear(_ animated: Bool) {
+    
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
     }
-
+    
 }

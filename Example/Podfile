@@ -2,10 +2,4 @@ use_frameworks!
 
 target 'SwiftWebVCExample' do
   pod 'SwiftWebVC', :path => '../'
-
-  target 'SwiftWebVCExampleTests' do
-    inherit! :search_paths
-
-    
-  end
 end
