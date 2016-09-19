@@ -1,6 +1,6 @@
 # SwiftWebVC
 
-**Updated for iOS 8/9 & Swift 2.0.**
+**Updated for iOS 10 & Swift 3.0.**
 
 SwiftWebVC is a simple inline browser for your Swift iOS app.
 
