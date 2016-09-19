@@ -18,26 +18,26 @@ class SwiftModalWebVC: UINavigationController {
     var webViewController: SwiftWebVC!
     
     convenience init(urlString: String) {
-        self.init(pageURL: NSURL(string: urlString)!)
+        self.init(pageURL: URL(string: urlString)!)
     }
     
     convenience init(urlString: String, theme: SwiftModalWebVCTheme) {
-        self.init(pageURL: NSURL(string: urlString)!, theme: theme)
+        self.init(pageURL: URL(string: urlString)!, theme: theme)
     }
     
-    convenience init(pageURL: NSURL) {
-        self.init(request: NSURLRequest(URL: pageURL))
+    convenience init(pageURL: URL) {
+        self.init(request: URLRequest(url: pageURL))
     }
     
-    convenience init(pageURL: NSURL, theme: SwiftModalWebVCTheme) {
-        self.init(request: NSURLRequest(URL: pageURL), theme: theme)
+    convenience init(pageURL: URL, theme: SwiftModalWebVCTheme) {
+        self.init(request: URLRequest(url: pageURL), theme: theme)
     }
     
-    init(request: NSURLRequest, theme: SwiftModalWebVCTheme = .lightBlue) {
+    init(request: URLRequest, theme: SwiftModalWebVCTheme = .lightBlue) {
         webViewController = SwiftWebVC(aRequest: request)
         webViewController.storedStatusColor = UINavigationBar.appearance().barStyle
         let doneButton = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCDismiss"),
-                                         style: UIBarButtonItemStyle.Plain,
+                                         style: UIBarButtonItemStyle.plain,
                                          target: webViewController,
                                          action: #selector(SwiftWebVC.doneButtonTapped(_:)))
         
@@ -45,21 +45,21 @@ class SwiftModalWebVC: UINavigationController {
         case .lightBlue:
             doneButton.tintColor = nil
             webViewController.buttonColor = nil
-            webViewController.titleColor = UIColor.blackColor()
-            UINavigationBar.appearance().barStyle = UIBarStyle.Default
+            webViewController.titleColor = UIColor.black
+            UINavigationBar.appearance().barStyle = UIBarStyle.default
         case .lightBlack:
-            doneButton.tintColor = UIColor.darkGrayColor()
-            webViewController.buttonColor = UIColor.darkGrayColor()
-            webViewController.titleColor = UIColor.blackColor()
-            UINavigationBar.appearance().barStyle = UIBarStyle.Default
+            doneButton.tintColor = UIColor.darkGray
+            webViewController.buttonColor = UIColor.darkGray
+            webViewController.titleColor = UIColor.black
+            UINavigationBar.appearance().barStyle = UIBarStyle.default
         case .dark:
-            doneButton.tintColor = UIColor.whiteColor()
-            webViewController.buttonColor = UIColor.whiteColor()
-            webViewController.titleColor = UIColor.groupTableViewBackgroundColor()
-            UINavigationBar.appearance().barStyle = UIBarStyle.Black
+            doneButton.tintColor = UIColor.white
+            webViewController.buttonColor = UIColor.white
+            webViewController.titleColor = UIColor.groupTableViewBackground
+            UINavigationBar.appearance().barStyle = UIBarStyle.black
         }
         
-        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
             webViewController.navigationItem.leftBarButtonItem = doneButton
         }
         else {
@@ -68,7 +68,7 @@ class SwiftModalWebVC: UINavigationController {
         super.init(rootViewController: webViewController)
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
  
@@ -76,7 +76,7 @@ class SwiftModalWebVC: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
    
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
     }
 

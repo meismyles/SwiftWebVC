@@ -10,21 +10,21 @@ import UIKit
 
 class SwiftWebVCActivitySafari : SwiftWebVCActivity {
     
-    override func activityTitle() -> String {
+    override var activityTitle : String {
         return NSLocalizedString("Open in Safari", tableName: "SwiftWebVC", comment: "")
     }
     
-    override func canPerformWithActivityItems(activityItems: [AnyObject]) -> Bool {
+    override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
         for activityItem in activityItems {
-            if activityItem .isKindOfClass(NSURL) && UIApplication.sharedApplication().canOpenURL(activityItem as! NSURL) {
+            if let activityItem = activityItem as? URL, UIApplication.shared.canOpenURL(activityItem) {
                 return true
             }
         }
         return false
     }
     
-    override func performActivity() {
-        let completed: Bool = UIApplication.sharedApplication().openURL(URLToOpen!)
+    override func perform() {
+        let completed: Bool = UIApplication.shared.openURL(URLToOpen! as URL)
         activityDidFinish(completed)
     }
     

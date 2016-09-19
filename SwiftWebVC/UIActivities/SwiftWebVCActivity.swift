@@ -11,28 +11,34 @@ import UIKit
 
 class SwiftWebVCActivity: UIActivity {
 
-    var URLToOpen: NSURL?
+    var URLToOpen: URL?
     var schemePrefix: String?
     
-    override func activityType() -> String {
-        return "\(self.dynamicType)"
+    override var activityType : UIActivityType? {
+        let typeArray = "\(type(of: self))".components(separatedBy: ".")
+        let type: String = typeArray[typeArray.count-1]
+        return UIActivityType(rawValue: type)
     }
         
-    override func activityImage() -> UIImage {
-        let typeArray: NSArray = activityType().componentsSeparatedByString(".")
-        let type: String = typeArray[typeArray.count-1] as! String
-        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
-            return UIImage(named: type+"-iPad")!
+    override var activityImage : UIImage {
+        if let type = activityType?.rawValue {
+            if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
+                return UIImage(named: type+"-iPad")!
+            }
+            else {
+                return UIImage(named: type)!
+            }
         }
-        else {
-            return UIImage(named: type)!
+        else{
+            assert(false, "Unknow type")
+            return UIImage()
         }
     }
             
-    override func prepareWithActivityItems(activityItems: [AnyObject]) {
+    override func prepare(withActivityItems activityItems: [Any]) {
         for activityItem in activityItems {
-            if activityItem .isKindOfClass(NSURL) {
-                URLToOpen = activityItem as? NSURL
+            if activityItem is URL {
+                URLToOpen = activityItem as? URL
             }
         }
     }
