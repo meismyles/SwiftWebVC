@@ -17,7 +17,10 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
     var closing: Bool! = false
     
     lazy var backBarButtonItem: UIBarButtonItem =  {
-        var tempBackBarButtonItem = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCBack"),
+        let image = UIImage(named: "SwiftWebVCBack",
+                            in: Bundle(for: SwiftWebVC.self),
+                            compatibleWith: nil)
+        var tempBackBarButtonItem = UIBarButtonItem(image: image,
                                                     style: UIBarButtonItemStyle.plain,
                                                     target: self,
                                                     action: #selector(SwiftWebVC.goBackTapped(_:)))
@@ -27,7 +30,10 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
     }()
     
     lazy var forwardBarButtonItem: UIBarButtonItem =  {
-        var tempForwardBarButtonItem = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCNext"),
+        let image = UIImage(named: "SwiftWebVCNext",
+                            in: Bundle(for: SwiftWebVC.self),
+                            compatibleWith: nil)
+        var tempForwardBarButtonItem = UIBarButtonItem(image: image,
                                                        style: UIBarButtonItemStyle.plain,
                                                        target: self,
                                                        action: #selector(SwiftWebVC.goForwardTapped(_:)))

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C87F1FF1DF0B4C200FDB230 /* SwiftWebVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C87F1FD1DF0B4C200FDB230 /* SwiftWebVC.strings */; };
+		2C87F20B1DF0B76100FDB230 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C87F20A1DF0B76100FDB230 /* Media.xcassets */; };
 		92FD6006DF6E7B884F239AA5 /* Pods_SwiftWebVCExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E49BD07E1FA9F634C6F43D /* Pods_SwiftWebVCExample.framework */; };
 		C261B6A51CA9A5B9007F6A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B6A41CA9A5B9007F6A49 /* AppDelegate.swift */; };
 		C261B6A71CA9A5B9007F6A49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261B6A61CA9A5B9007F6A49 /* ViewController.swift */; };
 		C261B6AA1CA9A5B9007F6A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C261B6A81CA9A5B9007F6A49 /* Main.storyboard */; };
 		C261B6AC1CA9A5B9007F6A49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C261B6AB1CA9A5B9007F6A49 /* Assets.xcassets */; };
 		C261B6AF1CA9A5B9007F6A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C261B6AD1CA9A5B9007F6A49 /* LaunchScreen.storyboard */; };
-		EF2EDE541D43E5980012A147 /* SwiftWebVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE391D43E5980012A147 /* SwiftWebVC.strings */; };
 		EF2EDE551D43E5980012A147 /* SwiftModalWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE421D43E5980012A147 /* SwiftModalWebVC.swift */; };
-		EF2EDE561D43E5980012A147 /* SwiftWebVC.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF2EDE431D43E5980012A147 /* SwiftWebVC.bundle */; };
 		EF2EDE571D43E5980012A147 /* SwiftWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE441D43E5980012A147 /* SwiftWebVC.swift */; };
 		EF2EDE5A1D43E5980012A147 /* SwiftWebVCActivityChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE491D43E5980012A147 /* SwiftWebVCActivityChrome.swift */; };
 		EF2EDE5E1D43E5980012A147 /* SwiftWebVCActivitySafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2EDE4E1D43E5980012A147 /* SwiftWebVCActivitySafari.swift */; };
@@ -25,6 +25,18 @@
 /* Begin PBXFileReference section */
 		12E49BD07E1FA9F634C6F43D /* Pods_SwiftWebVCExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWebVCExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DF013BF6509E5CDA77AD1B /* Pods-SwiftWebVCExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWebVCExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWebVCExample/Pods-SwiftWebVCExample.release.xcconfig"; sourceTree = "<group>"; };
+		2C87F1FE1DF0B4C200FDB230 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Strings/en.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		2C87F2001DF0B4CA00FDB230 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = Strings/da.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		2C87F2011DF0B4E200FDB230 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Strings/de.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		2C87F2021DF0B4F200FDB230 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "Strings/es-ES.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		2C87F2031DF0B4FC00FDB230 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Strings/es.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		2C87F2041DF0B50600FDB230 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Strings/fr.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		2C87F2051DF0B50E00FDB230 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Strings/ja.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		2C87F2061DF0B51400FDB230 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = Strings/pt.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		2C87F2071DF0B51B00FDB230 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = Strings/vi.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		2C87F2081DF0B52200FDB230 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Strings/zh-Hans.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		2C87F2091DF0B52900FDB230 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "Strings/zh-Hant.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		2C87F20A1DF0B76100FDB230 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = Assets/Media.xcassets; sourceTree = "<group>"; };
 		5B904931E7C6226C341F4940 /* Pods-SwiftWebVCExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWebVCExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWebVCExample/Pods-SwiftWebVCExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C261B6A11CA9A5B9007F6A49 /* SwiftWebVCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWebVCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C261B6A41CA9A5B9007F6A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,23 +45,11 @@
 		C261B6AB1CA9A5B9007F6A49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C261B6AE1CA9A5B9007F6A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C261B6B01CA9A5B9007F6A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF2EDE3A1D43E5980012A147 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		EF2EDE3B1D43E5980012A147 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		EF2EDE3C1D43E5980012A147 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		EF2EDE3D1D43E5980012A147 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
-		EF2EDE3E1D43E5980012A147 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		EF2EDE3F1D43E5980012A147 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		EF2EDE401D43E5980012A147 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		EF2EDE411D43E5980012A147 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
 		EF2EDE421D43E5980012A147 /* SwiftModalWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftModalWebVC.swift; sourceTree = "<group>"; };
-		EF2EDE431D43E5980012A147 /* SwiftWebVC.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftWebVC.bundle; sourceTree = "<group>"; };
 		EF2EDE441D43E5980012A147 /* SwiftWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVC.swift; sourceTree = "<group>"; };
 		EF2EDE491D43E5980012A147 /* SwiftWebVCActivityChrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivityChrome.swift; sourceTree = "<group>"; };
 		EF2EDE4E1D43E5980012A147 /* SwiftWebVCActivitySafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivitySafari.swift; sourceTree = "<group>"; };
 		EF2EDE501D43E5980012A147 /* SwiftWebVCActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivity.swift; sourceTree = "<group>"; };
-		EF2EDE511D43E5980012A147 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		EF2EDE521D43E5980012A147 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
-		EF2EDE531D43E5980012A147 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C87F1CE1DF0B3DE00FDB230 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2C87F20A1DF0B76100FDB230 /* Media.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		9E5721FE17F879B6BC722F24 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,10 +124,10 @@
 		EF2EDE381D43E5980012A147 /* SwiftWebVC */ = {
 			isa = PBXGroup;
 			children = (
-				EF2EDE391D43E5980012A147 /* SwiftWebVC.strings */,
+				2C87F1CE1DF0B3DE00FDB230 /* Assets */,
 				EF2EDE421D43E5980012A147 /* SwiftModalWebVC.swift */,
-				EF2EDE431D43E5980012A147 /* SwiftWebVC.bundle */,
 				EF2EDE441D43E5980012A147 /* SwiftWebVC.swift */,
+				2C87F1FD1DF0B4C200FDB230 /* SwiftWebVC.strings */,
 				EF2EDE451D43E5980012A147 /* UIActivities */,
 			);
 			name = SwiftWebVC;
@@ -224,10 +232,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C87F20B1DF0B76100FDB230 /* Media.xcassets in Resources */,
+				2C87F1FF1DF0B4C200FDB230 /* SwiftWebVC.strings in Resources */,
 				C261B6AF1CA9A5B9007F6A49 /* LaunchScreen.storyboard in Resources */,
 				C261B6AC1CA9A5B9007F6A49 /* Assets.xcassets in Resources */,
-				EF2EDE561D43E5980012A147 /* SwiftWebVC.bundle in Resources */,
-				EF2EDE541D43E5980012A147 /* SwiftWebVC.strings in Resources */,
 				C261B6AA1CA9A5B9007F6A49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +308,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2C87F1FD1DF0B4C200FDB230 /* SwiftWebVC.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C87F1FE1DF0B4C200FDB230 /* en */,
+				2C87F2001DF0B4CA00FDB230 /* da */,
+				2C87F2011DF0B4E200FDB230 /* de */,
+				2C87F2021DF0B4F200FDB230 /* es-ES */,
+				2C87F2031DF0B4FC00FDB230 /* es */,
+				2C87F2041DF0B50600FDB230 /* fr */,
+				2C87F2051DF0B50E00FDB230 /* ja */,
+				2C87F2061DF0B51400FDB230 /* pt */,
+				2C87F2071DF0B51B00FDB230 /* vi */,
+				2C87F2081DF0B52200FDB230 /* zh-Hans */,
+				2C87F2091DF0B52900FDB230 /* zh-Hant */,
+			);
+			name = SwiftWebVC.strings;
+			sourceTree = "<group>";
+		};
 		C261B6A81CA9A5B9007F6A49 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -314,24 +340,6 @@
 				C261B6AE1CA9A5B9007F6A49 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		EF2EDE391D43E5980012A147 /* SwiftWebVC.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF2EDE3A1D43E5980012A147 /* da */,
-				EF2EDE3B1D43E5980012A147 /* de */,
-				EF2EDE3C1D43E5980012A147 /* en */,
-				EF2EDE3D1D43E5980012A147 /* es-ES */,
-				EF2EDE3E1D43E5980012A147 /* es */,
-				EF2EDE3F1D43E5980012A147 /* fr */,
-				EF2EDE401D43E5980012A147 /* ja */,
-				EF2EDE411D43E5980012A147 /* pt */,
-				EF2EDE511D43E5980012A147 /* vi */,
-				EF2EDE521D43E5980012A147 /* zh-Hans */,
-				EF2EDE531D43E5980012A147 /* zh-Hant */,
-			);
-			name = SwiftWebVC.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
