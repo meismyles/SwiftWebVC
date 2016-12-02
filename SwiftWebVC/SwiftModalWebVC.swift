@@ -36,7 +36,10 @@ public class SwiftModalWebVC: UINavigationController {
     public init(request: URLRequest, theme: SwiftModalWebVCTheme = .lightBlue) {
         webViewController = SwiftWebVC(aRequest: request)
         webViewController.storedStatusColor = UINavigationBar.appearance().barStyle
-        let doneButton = UIBarButtonItem(image: UIImage(named: "SwiftWebVC.bundle/SwiftWebVCDismiss"),
+        let image = UIImage(named: "SwiftWebVCDismiss",
+                            in: Bundle(for: SwiftModalWebVC.self),
+                            compatibleWith: nil)
+        let doneButton = UIBarButtonItem(image: image,
                                          style: UIBarButtonItemStyle.plain,
                                          target: webViewController,
                                          action: #selector(SwiftWebVC.doneButtonTapped(_:)))
@@ -79,5 +82,4 @@ public class SwiftModalWebVC: UINavigationController {
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
     }
-    
 }
