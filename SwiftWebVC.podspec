@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   s.source_files = 'SwiftWebVC/**/*.swift'
 
   s.resource_bundles = {
-    'SwiftWebVC' => ['SwiftWebVC/Assets/*.png']
+    'SwiftWebVCResources' => ['SwiftWebVC/Assets/Media.xcassets']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

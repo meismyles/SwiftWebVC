@@ -17,10 +17,7 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
     var closing: Bool! = false
     
     lazy var backBarButtonItem: UIBarButtonItem =  {
-        let image = UIImage(named: "SwiftWebVCBack",
-                            in: Bundle(for: SwiftWebVC.self),
-                            compatibleWith: nil)
-        var tempBackBarButtonItem = UIBarButtonItem(image: image,
+        var tempBackBarButtonItem = UIBarButtonItem(image: SwiftWebVC.image(named: "SwiftWebVCBack"),
                                                     style: UIBarButtonItemStyle.plain,
                                                     target: self,
                                                     action: #selector(SwiftWebVC.goBackTapped(_:)))
@@ -30,10 +27,7 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
     }()
     
     lazy var forwardBarButtonItem: UIBarButtonItem =  {
-        let image = UIImage(named: "SwiftWebVCNext",
-                            in: Bundle(for: SwiftWebVC.self),
-                            compatibleWith: nil)
-        var tempForwardBarButtonItem = UIBarButtonItem(image: image,
+        var tempForwardBarButtonItem = UIBarButtonItem(image: SwiftWebVC.image(named: "SwiftWebVCNext"),
                                                        style: UIBarButtonItemStyle.plain,
                                                        target: self,
                                                        action: #selector(SwiftWebVC.goForwardTapped(_:)))
@@ -285,6 +279,22 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
         closing = true
         UINavigationBar.appearance().barStyle = storedStatusColor!
         self.dismiss(animated: true, completion: {})
+    }
+
+    // MARK: - Class Methods
+
+    /// Helper function to get image within SwiftWebVCResources bundle
+    ///
+    /// - parameter named: The name of the image in the SwiftWebVCResources bundle
+    class func image(named name: String) -> UIImage? {
+        let podBundle = Bundle(for: SwiftWebVC.classForCoder())
+
+        guard let podBundleURL = podBundle.url(forResource: "SwiftWebVCResources", withExtension: "bundle"),
+            let resourceBundle = Bundle(url: podBundleURL) else {
+                return nil
+        }
+
+        return UIImage(named: name, in: resourceBundle, compatibleWith: nil)
     }
     
 }
