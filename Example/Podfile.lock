@@ -1,16 +1,16 @@
 PODS:
-  - SwiftWebVC (0.1.0)
+  - SwiftWebVC (0.1.1)
 
 DEPENDENCIES:
   - SwiftWebVC (from `../`)
 
 EXTERNAL SOURCES:
   SwiftWebVC:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftWebVC: 85bfb6abc44ce71b2b68dd2fcd1c4b009df313a9
+  SwiftWebVC: 33250b50f067abd1804496e07840a1e4a999e4db
 
 PODFILE CHECKSUM: 1a3214c24ff0763e73c40589789fc15018b936f9
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1
