@@ -23,10 +23,10 @@ class SwiftWebVCActivity: UIActivity {
     override var activityImage : UIImage {
         if let type = activityType?.rawValue {
             if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
-                return SwiftWebVC.image(named: "\(type)-iPad")!
+                return SwiftWebVC.bundledImage(named: "\(type)-iPad")!
             }
             else {
-                return SwiftWebVC.image(named: "\(type)")!
+                return SwiftWebVC.bundledImage(named: "\(type)")!
             }
         }
         else{

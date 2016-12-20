@@ -1,60 +1,102 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zaI-sO-1Yv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="VSd-2g-glL">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftWebVCExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bLx-fa-uWl" customClass="ViewController" customModule="SwiftWebVCExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="7DD-1Q-p6P"/>
+                        <viewControllerLayoutGuide type="bottom" id="m8b-n4-PSe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="bXY-Xx-qq8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0P-eB-vT5">
-                                <rect key="frame" x="172" y="286" width="257" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E22-Wf-Eov">
+                                <rect key="frame" x="59" y="367.5" width="257" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Open Google.com With Light Black Theme"/>
                                 <connections>
-                                    <action selector="presentWithLightBlackTheme" destination="BYZ-38-t0r" eventType="touchUpInside" id="ID8-wc-Ex9"/>
+                                    <action selector="presentModalWithLightBlackTheme" destination="bLx-fa-uWl" eventType="touchUpInside" id="Ydh-HA-vd3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvZ-Ht-z2R">
-                                <rect key="frame" x="191" y="334" width="218" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3S-Y4-F4d">
+                                <rect key="frame" x="79" y="415.5" width="218" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Open Google.com With Dark Theme"/>
                                 <connections>
-                                    <action selector="presentWithDarkTheme" destination="BYZ-38-t0r" eventType="touchUpInside" id="VgS-Gt-270"/>
+                                    <action selector="presentModalWithDarkTheme" destination="bLx-fa-uWl" eventType="touchUpInside" id="UqP-Zs-pt4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r74-NC-6Va">
-                                <rect key="frame" x="147" y="238" width="307" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSh-Xk-40Y">
+                                <rect key="frame" x="34" y="319.5" width="307" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Open Google.com With Default Theme (Light Blue)"/>
                                 <connections>
-                                    <action selector="presentWithDefaultTheme" destination="BYZ-38-t0r" eventType="touchUpInside" id="mlj-8m-Bec"/>
+                                    <action selector="presentModalWithDefaultTheme" destination="bLx-fa-uWl" eventType="touchUpInside" id="IMm-VB-fyc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MODAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="081-aS-c8D">
+                                <rect key="frame" x="163.5" y="295.5" width="48.5" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-UK-JwU">
+                                <rect key="frame" x="112" y="233.5" width="152" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Open Google.com (Push)"/>
+                                <connections>
+                                    <action selector="push" destination="bLx-fa-uWl" eventType="touchUpInside" id="7ei-rv-Ow1"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="H0P-eB-vT5" firstAttribute="top" secondItem="r74-NC-6Va" secondAttribute="bottom" constant="20" id="BVQ-20-LJt"/>
-                            <constraint firstItem="H0P-eB-vT5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L1S-nq-X7C"/>
-                            <constraint firstItem="r74-NC-6Va" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sfw-go-NSL"/>
-                            <constraint firstItem="H0P-eB-vT5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UC2-gl-fDk"/>
-                            <constraint firstItem="SvZ-Ht-z2R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W04-if-WMX"/>
-                            <constraint firstItem="SvZ-Ht-z2R" firstAttribute="top" secondItem="H0P-eB-vT5" secondAttribute="bottom" constant="20" id="lgo-0G-vvk"/>
+                            <constraint firstItem="k3S-Y4-F4d" firstAttribute="centerX" secondItem="bXY-Xx-qq8" secondAttribute="centerX" id="964-EK-xal"/>
+                            <constraint firstItem="E22-Wf-Eov" firstAttribute="top" secondItem="QSh-Xk-40Y" secondAttribute="bottom" constant="20" id="9Rc-Ia-roS"/>
+                            <constraint firstItem="QSh-Xk-40Y" firstAttribute="centerY" secondItem="bXY-Xx-qq8" secondAttribute="centerY" id="AKe-Ro-lFE"/>
+                            <constraint firstItem="QSh-Xk-40Y" firstAttribute="centerX" secondItem="bXY-Xx-qq8" secondAttribute="centerX" id="MkB-QK-YWL"/>
+                            <constraint firstItem="8ec-UK-JwU" firstAttribute="centerX" secondItem="bXY-Xx-qq8" secondAttribute="centerX" id="Nru-Ws-bMg"/>
+                            <constraint firstItem="081-aS-c8D" firstAttribute="top" secondItem="8ec-UK-JwU" secondAttribute="bottom" constant="34" id="a5j-rN-XVI"/>
+                            <constraint firstItem="QSh-Xk-40Y" firstAttribute="top" secondItem="081-aS-c8D" secondAttribute="bottom" constant="8" id="cJl-nW-KQw"/>
+                            <constraint firstItem="k3S-Y4-F4d" firstAttribute="top" secondItem="E22-Wf-Eov" secondAttribute="bottom" constant="20" id="gz9-W9-QQR"/>
+                            <constraint firstItem="081-aS-c8D" firstAttribute="centerX" secondItem="bXY-Xx-qq8" secondAttribute="centerX" id="k5b-et-2SC"/>
+                            <constraint firstItem="E22-Wf-Eov" firstAttribute="centerX" secondItem="bXY-Xx-qq8" secondAttribute="centerX" id="v86-bT-iv3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="D1Z-Rq-gnB"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6J-qN-fnl" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QX7-vu-2kr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zaI-sO-1Yv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="heT-aK-khc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bLx-fa-uWl" kind="relationship" relationship="rootViewController" id="0o1-7c-P9o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJQ-A3-lVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="38"/>
         </scene>
     </scenes>
 </document>

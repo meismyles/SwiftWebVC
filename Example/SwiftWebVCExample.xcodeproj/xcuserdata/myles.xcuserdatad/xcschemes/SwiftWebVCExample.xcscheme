@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C261B6A01CA9A5B9007F6A49"
+               BlueprintIdentifier = "00FFF8541E09977500015C59"
                BuildableName = "SwiftWebVCExample.app"
                BlueprintName = "SwiftWebVCExample"
                ReferencedContainer = "container:SwiftWebVCExample.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C261B6B41CA9A5B9007F6A49"
-               BuildableName = "SwiftWebVCExampleTests.xctest"
-               BlueprintName = "SwiftWebVCExampleTests"
-               ReferencedContainer = "container:SwiftWebVCExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C261B6BF1CA9A5B9007F6A49"
-               BuildableName = "SwiftWebVCExampleUITests.xctest"
-               BlueprintName = "SwiftWebVCExampleUITests"
-               ReferencedContainer = "container:SwiftWebVCExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C261B6A01CA9A5B9007F6A49"
+            BlueprintIdentifier = "00FFF8541E09977500015C59"
             BuildableName = "SwiftWebVCExample.app"
             BlueprintName = "SwiftWebVCExample"
             ReferencedContainer = "container:SwiftWebVCExample.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C261B6A01CA9A5B9007F6A49"
+            BlueprintIdentifier = "00FFF8541E09977500015C59"
             BuildableName = "SwiftWebVCExample.app"
             BlueprintName = "SwiftWebVCExample"
             ReferencedContainer = "container:SwiftWebVCExample.xcodeproj">
@@ -94,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C261B6A01CA9A5B9007F6A49"
+            BlueprintIdentifier = "00FFF8541E09977500015C59"
             BuildableName = "SwiftWebVCExample.app"
             BlueprintName = "SwiftWebVCExample"
             ReferencedContainer = "container:SwiftWebVCExample.xcodeproj">

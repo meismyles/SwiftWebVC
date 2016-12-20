@@ -10,13 +10,14 @@ import WebKit
 
 public class SwiftWebVC: UIViewController {
     
+    weak var delegate: UIWebViewDelegate? = nil
     var storedStatusColor: UIBarStyle?
     var buttonColor: UIColor? = nil
     var titleColor: UIColor? = nil
     var closing: Bool! = false
     
     lazy var backBarButtonItem: UIBarButtonItem =  {
-        var tempBackBarButtonItem = UIBarButtonItem(image: SwiftWebVC.image(named: "SwiftWebVCBack"),
+        var tempBackBarButtonItem = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: "SwiftWebVCBack"),
                                                     style: UIBarButtonItemStyle.plain,
                                                     target: self,
                                                     action: #selector(SwiftWebVC.goBackTapped(_:)))
@@ -26,7 +27,7 @@ public class SwiftWebVC: UIViewController {
     }()
     
     lazy var forwardBarButtonItem: UIBarButtonItem =  {
-        var tempForwardBarButtonItem = UIBarButtonItem(image: SwiftWebVC.image(named: "SwiftWebVCNext"),
+        var tempForwardBarButtonItem = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: "SwiftWebVCNext"),
                                                        style: UIBarButtonItemStyle.plain,
                                                        target: self,
                                                        action: #selector(SwiftWebVC.goForwardTapped(_:)))
@@ -62,8 +63,8 @@ public class SwiftWebVC: UIViewController {
     
     lazy var webView: WKWebView = {
         var tempWebView = WKWebView(frame: UIScreen.main.bounds)
-        tempWebView.uiDelegate = self;
-        tempWebView.navigationDelegate = self;
+        tempWebView.uiDelegate = self
+        tempWebView.navigationDelegate = self
         return tempWebView;
     }()
     
@@ -258,26 +259,23 @@ public class SwiftWebVC: UIViewController {
     /// Helper function to get image within SwiftWebVCResources bundle
     ///
     /// - parameter named: The name of the image in the SwiftWebVCResources bundle
-    class func image(named name: String) -> UIImage? {
-        let podBundle = Bundle(for: SwiftWebVC.classForCoder())
-
-        guard let podBundleURL = podBundle.url(forResource: "SwiftWebVCResources", withExtension: "bundle"),
-            let resourceBundle = Bundle(url: podBundleURL) else {
-                return nil
-        }
-
-        return UIImage(named: name, in: resourceBundle, compatibleWith: nil)
+    class func bundledImage(named: String) -> UIImage? {
+        let image = UIImage(named: named)
+        if image == nil {
+            return UIImage(named: named, in: Bundle(for: SwiftWebVC.classForCoder()), compatibleWith: nil)
+        } // Replace MyBasePodClass with yours
+        return image
     }
     
 }
 
-extension SwiftWebVC : WKUIDelegate {
+extension SwiftWebVC: WKUIDelegate {
     
     // Add any desired WKUIDelegate methods here: https://developer.apple.com/reference/webkit/wkuidelegate
     
 }
 
-extension SwiftWebVC : WKNavigationDelegate {
+extension SwiftWebVC: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -300,6 +298,6 @@ extension SwiftWebVC : WKNavigationDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         updateToolbarItems()
     }
-
+    
     
 }
