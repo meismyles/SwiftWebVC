@@ -1,5 +1,5 @@
 PODS:
-  - SwiftWebVC (0.1.1)
+  - SwiftWebVC (0.1.2)
 
 DEPENDENCIES:
   - SwiftWebVC (from `../`)
