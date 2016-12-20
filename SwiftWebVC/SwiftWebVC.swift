@@ -6,11 +6,10 @@
 //  Copyright (c) 2015 Myles Ringle & Sam Vermette. All rights reserved.
 //
 
-import UIKit
+import WebKit
 
-public class SwiftWebVC: UIViewController, UIWebViewDelegate {
+public class SwiftWebVC: UIViewController {
     
-    weak var delegate: UIWebViewDelegate? = nil
     var storedStatusColor: UIBarStyle?
     var buttonColor: UIColor? = nil
     var titleColor: UIColor? = nil
@@ -61,10 +60,10 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
     }()
     
     
-    lazy var webView: UIWebView = {
-        var tempWebView = UIWebView(frame: UIScreen.main.bounds)
-        tempWebView.delegate = self;
-        tempWebView.scalesPageToFit = true;
+    lazy var webView: WKWebView = {
+        var tempWebView = WKWebView(frame: UIScreen.main.bounds)
+        tempWebView.uiDelegate = self;
+        tempWebView.navigationDelegate = self;
         return tempWebView;
     }()
     
@@ -77,8 +76,8 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
     deinit {
         webView.stopLoading()
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        webView.delegate = nil;
-        delegate = nil;
+        webView.uiDelegate = nil;
+        webView.navigationDelegate = nil;
     }
     
     public convenience init(urlString: String) {
@@ -95,7 +94,7 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
     }
     
     func loadRequest(_ request: URLRequest) {
-        webView.loadRequest(request)
+        webView.load(request)
     }
     
     ////////////////////////////////////////////////
@@ -202,33 +201,6 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
         }
     }
     
-    ////////////////////////////////////////////////
-    // UIWebViewDelegate
-    
-    public func webViewDidStartLoad(_ webView: UIWebView) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        updateToolbarItems()
-    }
-    
-    
-    public func webViewDidFinishLoad(_ webView: UIWebView) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        
-        navBarTitle.text = webView.stringByEvaluatingJavaScript(from: "document.title")
-        navBarTitle.sizeToFit()
-        
-        updateToolbarItems()
-    }
-    
-    public func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        updateToolbarItems()
-    }
-    
-    public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        return true;
-    }
-    
     
     ////////////////////////////////////////////////
     // Target Actions
@@ -252,7 +224,7 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
     
     func actionButtonTapped(_ sender: AnyObject) {
         
-        if let url: URL = ((webView.request?.url != nil) ? webView.request?.url : request.url) {
+        if let url: URL = ((webView.url != nil) ? webView.url : request.url) {
             let activities: NSArray = [SwiftWebVCActivitySafari(), SwiftWebVCActivityChrome()]
             
             if url.absoluteString.hasPrefix("file:///") {
@@ -296,5 +268,38 @@ public class SwiftWebVC: UIViewController, UIWebViewDelegate {
 
         return UIImage(named: name, in: resourceBundle, compatibleWith: nil)
     }
+    
+}
+
+extension SwiftWebVC : WKUIDelegate {
+    
+    // Add any desired WKUIDelegate methods here: https://developer.apple.com/reference/webkit/wkuidelegate
+    
+}
+
+extension SwiftWebVC : WKNavigationDelegate {
+    
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        updateToolbarItems()
+    }
+    
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        
+        webView.evaluateJavaScript("document.title", completionHandler: {(response, error) in
+            self.navBarTitle.text = response as! String?
+            self.navBarTitle.sizeToFit()
+            self.updateToolbarItems()
+        })
+        
+    }
+    
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        updateToolbarItems()
+    }
+
     
 }
