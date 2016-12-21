@@ -15,7 +15,6 @@ public class SwiftModalWebVC: UINavigationController {
     }
     
     weak var webViewDelegate: UIWebViewDelegate? = nil
-    var webViewController: SwiftWebVC!
     
     public convenience init(urlString: String) {
         self.init(pageURL: URL(string: urlString)!)
@@ -34,13 +33,13 @@ public class SwiftModalWebVC: UINavigationController {
     }
     
     public init(request: URLRequest, theme: SwiftModalWebVCTheme = .lightBlue) {
-        webViewController = SwiftWebVC(aRequest: request)
+        let webViewController = SwiftWebVC(aRequest: request)
         webViewController.storedStatusColor = UINavigationBar.appearance().barStyle
 
         let doneButton = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: "SwiftWebVCDismiss"),
                                          style: UIBarButtonItemStyle.plain,
                                          target: webViewController,
-                                         action: #selector(SwiftWebVC.doneButtonTapped(_:)))
+                                         action: #selector(SwiftWebVC.doneButtonTapped))
         
         switch theme {
         case .lightBlue:
