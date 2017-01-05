@@ -58,6 +58,34 @@ let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: .lightBlack)
 let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: .dark)
 ```
 
+## Delegate (Start/Finish Loading Callbacks)
+
+SwiftWebVC also includes a delegate protocol that allows you to implement `didStartLoading` and `didFinishLoading` functions to determine when loading starts and finishes.
+
+To implement this, after declaring your instance of `SwiftWebVC`, set it's delegate and implement the callback functions. For example:
+
+**Inititalisation**
+
+```swift
+let webVC = SwiftWebVC(urlString: "https://www.google.com")
+webVC.delegate = self
+self.navigationController?.pushViewController(webVC, animated: true)
+```
+
+**Delegate Implementation**
+```swift
+extension ViewController: SwiftWebVCDelegate {
+    
+    func didStartLoading() {
+        print("Started loading.")
+    }
+    
+    func didFinishLoading(success: Bool) {
+        print("Finished loading. Success: \(success).")
+    }
+}
+```
+
 ### SwiftWebVCActivity
 
 Starting in iOS 6 Apple uses `UIActivity` to let you show additional sharing methods in share sheets. `SwiftWebVC` comes with "Open in Safari" and "Open in Chrome" activities. You can easily add your own activity by subclassing `SwiftWebVCActivity` which takes care of a few things automatically for you. Have a look at the Safari and Chrome activities for implementation examples.Typed
