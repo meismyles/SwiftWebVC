@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     // MARK: Push
     @IBAction func push() {
         let webVC = SwiftWebVC(urlString: "https://www.google.com")
+        webVC.delegate = self
         self.navigationController?.pushViewController(webVC, animated: true)
     }
     
@@ -44,3 +45,13 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: SwiftWebVCDelegate {
+    
+    func didStartLoading() {
+        print("Started loading.")
+    }
+    
+    func didFinishLoading(success: Bool) {
+        print("Finished loading. Success: \(success).")
+    }
+}
