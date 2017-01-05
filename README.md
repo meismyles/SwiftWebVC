@@ -62,6 +62,8 @@ let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: .dark)
 
 SwiftWebVC also includes a delegate protocol that allows you to implement `didStartLoading` and `didFinishLoading` functions to determine when loading starts and finishes.
 
+_Note: This is currently only implemented for `SwiftWebVC`, **not** `SwiftModalWebVC`._
+
 To implement this, after declaring your instance of `SwiftWebVC`, set it's delegate and implement the callback functions. For example:
 
 **Inititalisation**
