@@ -7,21 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0055F7A61E259F1A000ECD54 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0055F7931E259F1A000ECD54 /* Media.xcassets */; };
+		0055F7A71E259F1A000ECD54 /* SwiftWebVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0055F7951E259F1A000ECD54 /* SwiftWebVC.strings */; };
+		0055F7A81E259F1A000ECD54 /* SwiftModalWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055F7A11E259F1A000ECD54 /* SwiftModalWebVC.swift */; };
+		0055F7A91E259F1A000ECD54 /* SwiftWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055F7A21E259F1A000ECD54 /* SwiftWebVC.swift */; };
+		0055F7AA1E259F1A000ECD54 /* SwiftWebVCActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055F7A31E259F1A000ECD54 /* SwiftWebVCActivity.swift */; };
+		0055F7AB1E259F1A000ECD54 /* SwiftWebVCActivityChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055F7A41E259F1A000ECD54 /* SwiftWebVCActivityChrome.swift */; };
+		0055F7AC1E259F1A000ECD54 /* SwiftWebVCActivitySafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055F7A51E259F1A000ECD54 /* SwiftWebVCActivitySafari.swift */; };
 		00FFF8591E09977500015C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFF8581E09977500015C59 /* AppDelegate.swift */; };
 		00FFF85B1E09977500015C59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFF85A1E09977500015C59 /* ViewController.swift */; };
 		00FFF85E1E09977500015C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF85C1E09977500015C59 /* Main.storyboard */; };
 		00FFF8601E09977500015C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF85F1E09977500015C59 /* Assets.xcassets */; };
 		00FFF8631E09977500015C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF8611E09977500015C59 /* LaunchScreen.storyboard */; };
-		00FFF8821E09992E00015C59 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF86C1E09992E00015C59 /* Media.xcassets */; };
-		00FFF8831E09992E00015C59 /* SwiftWebVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF86E1E09992E00015C59 /* SwiftWebVC.strings */; };
-		00FFF8841E09992E00015C59 /* SwiftModalWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFF87A1E09992E00015C59 /* SwiftModalWebVC.swift */; };
-		00FFF8851E09992E00015C59 /* SwiftWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFF87B1E09992E00015C59 /* SwiftWebVC.swift */; };
-		00FFF8861E09992E00015C59 /* SwiftWebVCActivityChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFF87E1E09992E00015C59 /* SwiftWebVCActivityChrome.swift */; };
-		00FFF8871E09992E00015C59 /* SwiftWebVCActivitySafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFF8801E09992E00015C59 /* SwiftWebVCActivitySafari.swift */; };
-		00FFF8881E09992E00015C59 /* SwiftWebVCActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFF8811E09992E00015C59 /* SwiftWebVCActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0055F7931E259F1A000ECD54 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		0055F7961E259F1A000ECD54 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		0055F7971E259F1A000ECD54 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		0055F7981E259F1A000ECD54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		0055F7991E259F1A000ECD54 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		0055F79A1E259F1A000ECD54 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		0055F79B1E259F1A000ECD54 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		0055F79C1E259F1A000ECD54 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		0055F79D1E259F1A000ECD54 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		0055F79E1E259F1A000ECD54 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
+		0055F79F1E259F1A000ECD54 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		0055F7A01E259F1A000ECD54 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
+		0055F7A11E259F1A000ECD54 /* SwiftModalWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftModalWebVC.swift; sourceTree = "<group>"; };
+		0055F7A21E259F1A000ECD54 /* SwiftWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVC.swift; sourceTree = "<group>"; };
+		0055F7A31E259F1A000ECD54 /* SwiftWebVCActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivity.swift; sourceTree = "<group>"; };
+		0055F7A41E259F1A000ECD54 /* SwiftWebVCActivityChrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivityChrome.swift; sourceTree = "<group>"; };
+		0055F7A51E259F1A000ECD54 /* SwiftWebVCActivitySafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivitySafari.swift; sourceTree = "<group>"; };
 		00FFF8551E09977500015C59 /* SwiftWebVCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWebVCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FFF8581E09977500015C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00FFF85A1E09977500015C59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,23 +46,6 @@
 		00FFF85F1E09977500015C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FFF8621E09977500015C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FFF8641E09977500015C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00FFF86C1E09992E00015C59 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		00FFF86F1E09992E00015C59 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		00FFF8701E09992E00015C59 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		00FFF8711E09992E00015C59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		00FFF8721E09992E00015C59 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
-		00FFF8731E09992E00015C59 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		00FFF8741E09992E00015C59 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		00FFF8751E09992E00015C59 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		00FFF8761E09992E00015C59 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		00FFF8771E09992E00015C59 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/SwiftWebVC.strings; sourceTree = "<group>"; };
-		00FFF8781E09992E00015C59 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
-		00FFF8791E09992E00015C59 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SwiftWebVC.strings"; sourceTree = "<group>"; };
-		00FFF87A1E09992E00015C59 /* SwiftModalWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftModalWebVC.swift; sourceTree = "<group>"; };
-		00FFF87B1E09992E00015C59 /* SwiftWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVC.swift; sourceTree = "<group>"; };
-		00FFF87E1E09992E00015C59 /* SwiftWebVCActivityChrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivityChrome.swift; sourceTree = "<group>"; };
-		00FFF8801E09992E00015C59 /* SwiftWebVCActivitySafari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivitySafari.swift; sourceTree = "<group>"; };
-		00FFF8811E09992E00015C59 /* SwiftWebVCActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +59,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0055F7911E259F1A000ECD54 /* SwiftWebVC */ = {
+			isa = PBXGroup;
+			children = (
+				0055F7921E259F1A000ECD54 /* Resources */,
+				0055F7941E259F1A000ECD54 /* Strings */,
+				0055F7A11E259F1A000ECD54 /* SwiftModalWebVC.swift */,
+				0055F7A21E259F1A000ECD54 /* SwiftWebVC.swift */,
+				0055F7A31E259F1A000ECD54 /* SwiftWebVCActivity.swift */,
+				0055F7A41E259F1A000ECD54 /* SwiftWebVCActivityChrome.swift */,
+				0055F7A51E259F1A000ECD54 /* SwiftWebVCActivitySafari.swift */,
+			);
+			name = SwiftWebVC;
+			path = ../SwiftWebVC;
+			sourceTree = "<group>";
+		};
+		0055F7921E259F1A000ECD54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0055F7931E259F1A000ECD54 /* Media.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0055F7941E259F1A000ECD54 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				0055F7951E259F1A000ECD54 /* SwiftWebVC.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		00FFF84C1E09977500015C59 = {
 			isa = PBXGroup;
 			children = (
 				00FFF8571E09977500015C59 /* SwiftWebVCExample */,
-				00FFF86A1E09992E00015C59 /* SwiftWebVC */,
+				0055F7911E259F1A000ECD54 /* SwiftWebVC */,
 				00FFF8561E09977500015C59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,61 +118,6 @@
 				00FFF8641E09977500015C59 /* Info.plist */,
 			);
 			path = SwiftWebVCExample;
-			sourceTree = "<group>";
-		};
-		00FFF86A1E09992E00015C59 /* SwiftWebVC */ = {
-			isa = PBXGroup;
-			children = (
-				00FFF86B1E09992E00015C59 /* Assets */,
-				00FFF86D1E09992E00015C59 /* Strings */,
-				00FFF87A1E09992E00015C59 /* SwiftModalWebVC.swift */,
-				00FFF87B1E09992E00015C59 /* SwiftWebVC.swift */,
-				00FFF87C1E09992E00015C59 /* UIActivities */,
-			);
-			name = SwiftWebVC;
-			path = ../SwiftWebVC;
-			sourceTree = "<group>";
-		};
-		00FFF86B1E09992E00015C59 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				00FFF86C1E09992E00015C59 /* Media.xcassets */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		00FFF86D1E09992E00015C59 /* Strings */ = {
-			isa = PBXGroup;
-			children = (
-				00FFF86E1E09992E00015C59 /* SwiftWebVC.strings */,
-			);
-			path = Strings;
-			sourceTree = "<group>";
-		};
-		00FFF87C1E09992E00015C59 /* UIActivities */ = {
-			isa = PBXGroup;
-			children = (
-				00FFF87D1E09992E00015C59 /* Chrome */,
-				00FFF87F1E09992E00015C59 /* Safari */,
-				00FFF8811E09992E00015C59 /* SwiftWebVCActivity.swift */,
-			);
-			path = UIActivities;
-			sourceTree = "<group>";
-		};
-		00FFF87D1E09992E00015C59 /* Chrome */ = {
-			isa = PBXGroup;
-			children = (
-				00FFF87E1E09992E00015C59 /* SwiftWebVCActivityChrome.swift */,
-			);
-			path = Chrome;
-			sourceTree = "<group>";
-		};
-		00FFF87F1E09992E00015C59 /* Safari */ = {
-			isa = PBXGroup;
-			children = (
-				00FFF8801E09992E00015C59 /* SwiftWebVCActivitySafari.swift */,
-			);
-			path = Safari;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,10 +189,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00FFF8831E09992E00015C59 /* SwiftWebVC.strings in Resources */,
+				0055F7A71E259F1A000ECD54 /* SwiftWebVC.strings in Resources */,
 				00FFF8631E09977500015C59 /* LaunchScreen.storyboard in Resources */,
 				00FFF8601E09977500015C59 /* Assets.xcassets in Resources */,
-				00FFF8821E09992E00015C59 /* Media.xcassets in Resources */,
+				0055F7A61E259F1A000ECD54 /* Media.xcassets in Resources */,
 				00FFF85E1E09977500015C59 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,19 +204,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00FFF8871E09992E00015C59 /* SwiftWebVCActivitySafari.swift in Sources */,
-				00FFF8861E09992E00015C59 /* SwiftWebVCActivityChrome.swift in Sources */,
-				00FFF8841E09992E00015C59 /* SwiftModalWebVC.swift in Sources */,
-				00FFF8881E09992E00015C59 /* SwiftWebVCActivity.swift in Sources */,
+				0055F7AB1E259F1A000ECD54 /* SwiftWebVCActivityChrome.swift in Sources */,
+				0055F7A81E259F1A000ECD54 /* SwiftModalWebVC.swift in Sources */,
 				00FFF85B1E09977500015C59 /* ViewController.swift in Sources */,
+				0055F7AC1E259F1A000ECD54 /* SwiftWebVCActivitySafari.swift in Sources */,
 				00FFF8591E09977500015C59 /* AppDelegate.swift in Sources */,
-				00FFF8851E09992E00015C59 /* SwiftWebVC.swift in Sources */,
+				0055F7A91E259F1A000ECD54 /* SwiftWebVC.swift in Sources */,
+				0055F7AA1E259F1A000ECD54 /* SwiftWebVCActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0055F7951E259F1A000ECD54 /* SwiftWebVC.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0055F7961E259F1A000ECD54 /* da */,
+				0055F7971E259F1A000ECD54 /* de */,
+				0055F7981E259F1A000ECD54 /* en */,
+				0055F7991E259F1A000ECD54 /* es-ES */,
+				0055F79A1E259F1A000ECD54 /* es */,
+				0055F79B1E259F1A000ECD54 /* fr */,
+				0055F79C1E259F1A000ECD54 /* ja */,
+				0055F79D1E259F1A000ECD54 /* pt */,
+				0055F79E1E259F1A000ECD54 /* vi */,
+				0055F79F1E259F1A000ECD54 /* zh-Hans */,
+				0055F7A01E259F1A000ECD54 /* zh-Hant */,
+			);
+			name = SwiftWebVC.strings;
+			sourceTree = "<group>";
+		};
 		00FFF85C1E09977500015C59 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -255,24 +249,6 @@
 				00FFF8621E09977500015C59 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		00FFF86E1E09992E00015C59 /* SwiftWebVC.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00FFF86F1E09992E00015C59 /* da */,
-				00FFF8701E09992E00015C59 /* de */,
-				00FFF8711E09992E00015C59 /* en */,
-				00FFF8721E09992E00015C59 /* es-ES */,
-				00FFF8731E09992E00015C59 /* es */,
-				00FFF8741E09992E00015C59 /* fr */,
-				00FFF8751E09992E00015C59 /* ja */,
-				00FFF8761E09992E00015C59 /* pt */,
-				00FFF8771E09992E00015C59 /* vi */,
-				00FFF8781E09992E00015C59 /* zh-Hans */,
-				00FFF8791E09992E00015C59 /* zh-Hant */,
-			);
-			name = SwiftWebVC.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

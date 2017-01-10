@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftWebVC'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'SwiftWebVC is a simple inline browser for your Swift iOS app.'
 
 # This description is used to generate tags and improve search results.
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   s.source_files = 'SwiftWebVC/**/*.swift'
 
   s.resource_bundles = {
-    'SwiftWebVCResources' => ['SwiftWebVC/Assets/Media.xcassets']
+    'SwiftWebVCResources' => ['SwiftWebVC/Resources/Media.xcassets']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
