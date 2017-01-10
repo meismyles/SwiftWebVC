@@ -42,6 +42,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SwiftWebVC/**/*.swift'
 
+  s.resources = 'SwiftWebVC/Resources/*'
   s.resource_bundles = {
     'SwiftWebVCResources' => ['SwiftWebVC/Resources/*']
   }
