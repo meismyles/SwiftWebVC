@@ -8,14 +8,14 @@
 
 import WebKit
 
-public protocol SwiftWebVCDelegate {
+public protocol SwiftWebVCDelegate: class {
     func didStartLoading()
     func didFinishLoading(success: Bool)
 }
 
 public class SwiftWebVC: UIViewController {
     
-    public var delegate: SwiftWebVCDelegate?
+    public weak var delegate: SwiftWebVCDelegate?
     var storedStatusColor: UIBarStyle?
     var buttonColor: UIColor? = nil
     var titleColor: UIColor? = nil

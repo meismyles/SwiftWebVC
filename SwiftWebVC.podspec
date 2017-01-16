@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftWebVC'
-  s.version          = '0.3.3'
+  s.version          = '0.3.4'
   s.summary          = 'SwiftWebVC is a simple inline browser for your Swift iOS app.'
 
 # This description is used to generate tags and improve search results.
