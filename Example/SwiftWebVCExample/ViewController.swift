@@ -34,12 +34,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func presentModalWithLightBlackTheme() {
-        let webVC = SwiftModalWebVC(urlString: "https://www.google.com", theme: .lightBlack)
+        let webVC = SwiftModalWebVC(urlString: "https://www.google.com", theme: .lightBlack, dismissButtonStyle: .cross)
         self.present(webVC, animated: true, completion: nil)
     }
     
     @IBAction func presentModalWithDarkTheme() {
-        let webVC = SwiftModalWebVC(urlString: "https://www.google.com", theme: .dark)
+        let webVC = SwiftModalWebVC(urlString: "https://www.google.com", theme: .dark, dismissButtonStyle: .arrow)
         self.present(webVC, animated: true, completion: nil)
     }
 

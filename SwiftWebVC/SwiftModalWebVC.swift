@@ -13,6 +13,9 @@ public class SwiftModalWebVC: UINavigationController {
     public enum SwiftModalWebVCTheme {
         case lightBlue, lightBlack, dark
     }
+    public enum SwiftModalWebVCDismissButtonStyle {
+        case arrow, cross
+    }
     
     weak var webViewDelegate: UIWebViewDelegate? = nil
     
@@ -20,23 +23,24 @@ public class SwiftModalWebVC: UINavigationController {
         self.init(pageURL: URL(string: urlString)!)
     }
     
-    public convenience init(urlString: String, theme: SwiftModalWebVCTheme) {
-        self.init(pageURL: URL(string: urlString)!, theme: theme)
+    public convenience init(urlString: String, theme: SwiftModalWebVCTheme, dismissButtonStyle: SwiftModalWebVCDismissButtonStyle) {
+        self.init(pageURL: URL(string: urlString)!, theme: theme, dismissButtonStyle: dismissButtonStyle)
     }
     
     public convenience init(pageURL: URL) {
         self.init(request: URLRequest(url: pageURL))
     }
     
-    public convenience init(pageURL: URL, theme: SwiftModalWebVCTheme) {
-        self.init(request: URLRequest(url: pageURL), theme: theme)
+    public convenience init(pageURL: URL, theme: SwiftModalWebVCTheme, dismissButtonStyle: SwiftModalWebVCDismissButtonStyle) {
+        self.init(request: URLRequest(url: pageURL), theme: theme, dismissButtonStyle: dismissButtonStyle)
     }
     
-    public init(request: URLRequest, theme: SwiftModalWebVCTheme = .lightBlue) {
+    public init(request: URLRequest, theme: SwiftModalWebVCTheme = .lightBlue, dismissButtonStyle: SwiftModalWebVCDismissButtonStyle = .arrow) {
         let webViewController = SwiftWebVC(aRequest: request)
         webViewController.storedStatusColor = UINavigationBar.appearance().barStyle
-
-        let doneButton = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: "SwiftWebVCDismiss"),
+        
+        let dismissButtonImageName = (dismissButtonStyle == .arrow) ? "SwiftWebVCDismiss" : "SwiftWebVCDismissAlt"
+        let doneButton = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: dismissButtonImageName),
                                          style: UIBarButtonItemStyle.plain,
                                          target: webViewController,
                                          action: #selector(SwiftWebVC.doneButtonTapped))
