@@ -306,5 +306,59 @@ extension SwiftWebVC: WKNavigationDelegate {
         updateToolbarItems()
     }
     
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        
+        let url = navigationAction.request.url
+        
+        let hostAddress = navigationAction.request.url?.host
+        
+        if (navigationAction.targetFrame == nil) {
+            if UIApplication.shared.canOpenURL(url!) {
+                UIApplication.shared.openURL(url!)
+            }
+        }
+        decisionHandler(.allow)
+        
+        // To connnect app store
+        if hostAddress == "itunes.apple.com" {
+            if UIApplication.shared.canOpenURL(navigationAction.request.url!) {
+                UIApplication.shared.openURL(navigationAction.request.url!)
+                decisionHandler(.cancel)
+                return
+            }
+        }
+        
+        let url_elements = url!.absoluteString.components(separatedBy: ":")
+        
+        switch url_elements[0] {
+        case "tel":
+            openCustomApp(urlScheme: "telprompt://", additional_info: url_elements[1])
+            decisionHandler(.cancel)
+            
+        case "sms":
+            openCustomApp(urlScheme: "sms://", additional_info: url_elements[1])
+            decisionHandler(.cancel)
+            
+        case "mailto":
+            openCustomApp(urlScheme: "mailto://", additional_info: url_elements[1])
+            decisionHandler(.cancel)
+            
+        default:
+            print("Default")
+        }
+        
+        decisionHandler(.allow)
+        
+    }
     
+    func openCustomApp(urlScheme: String, additional_info:String){
+        
+        if let requestUrl: URL = URL(string:"\(urlScheme)"+"\(additional_info)") {
+            let application:UIApplication = UIApplication.shared
+            if application.canOpenURL(requestUrl) {
+                application.openURL(requestUrl)
+            }
+        }
+    }
 }
