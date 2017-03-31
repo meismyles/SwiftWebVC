@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     // MARK: Push
     @IBAction func push() {
-        let webVC = SwiftWebVC(urlString: "https://www.google.com")
+        let webVC = SwiftWebVC(urlString: "http://site.petitrc.com/reglages/yokomo/SetupSheetsYokomoBD8.html")
         webVC.delegate = self
         self.navigationController?.pushViewController(webVC, animated: true)
     }
