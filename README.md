@@ -1,10 +1,6 @@
 # SwiftWebVC
 
-**Updated for iOS 10 & Swift 3.0.**
-
 SwiftWebVC is a simple inline browser for your Swift iOS app.
-
-**Disclaimer:** SwiftWebVC is a Swift implementation of [Sam Vermette's SVWebViewController](https://github.com/samvermette/SVWebViewController/).
 
 ![SwiftWebVC](https://cloud.githubusercontent.com/assets/6603912/8509772/e1a1f2b6-22b0-11e5-878d-273b5b17b95a.png)
 
