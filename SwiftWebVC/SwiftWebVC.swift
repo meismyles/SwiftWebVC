@@ -197,14 +197,14 @@ public class SwiftWebVC: UIViewController {
         else {
             let items: NSArray = [fixedSpace, backBarButtonItem, flexibleSpace, forwardBarButtonItem, flexibleSpace, refreshStopBarButtonItem, flexibleSpace, actionBarButtonItem, fixedSpace]
             
-            if !closing {
+            if let navigationController = navigationController, !closing {
                 if presentingViewController == nil {
-                    navigationController!.toolbar.barTintColor = navigationController!.navigationBar.barTintColor
+                    navigationController.toolbar.barTintColor = navigationController.navigationBar.barTintColor
                 }
                 else {
-                    navigationController!.toolbar.barStyle = navigationController!.navigationBar.barStyle
+                    navigationController.toolbar.barStyle = navigationController.navigationBar.barStyle
                 }
-                navigationController!.toolbar.tintColor = navigationController!.navigationBar.tintColor
+                navigationController.toolbar.tintColor = navigationController.navigationBar.tintColor
                 toolbarItems = items as? [UIBarButtonItem]
             }
         }
