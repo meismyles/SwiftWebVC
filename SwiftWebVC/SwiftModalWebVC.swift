@@ -20,6 +20,10 @@ public class SwiftModalWebVC: UINavigationController {
     weak var webViewDelegate: UIWebViewDelegate? = nil
     
     public convenience init(urlString: String) {
+        var urlString = urlString
+        if !urlString.hasPrefix("https://") && !urlString.hasPrefix("http://") {
+            urlString = "https://"+urlString
+        }
         self.init(pageURL: URL(string: urlString)!)
     }
     

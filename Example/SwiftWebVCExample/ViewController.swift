@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     // MARK: Modal
     @IBAction func presentModalWithDefaultTheme() {
-        let webVC = SwiftModalWebVC(urlString: "https://www.google.com")
+        let webVC = SwiftModalWebVC(urlString: "www.google.com")
         self.present(webVC, animated: true, completion: nil)
     }
     

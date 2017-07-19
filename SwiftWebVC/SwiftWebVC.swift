@@ -87,6 +87,10 @@ public class SwiftWebVC: UIViewController {
     }
     
     public convenience init(urlString: String) {
+        var urlString = urlString
+        if !urlString.hasPrefix("https://") && !urlString.hasPrefix("http://") {
+            urlString = "https://"+urlString
+        }
         self.init(pageURL: URL(string: urlString)!)
     }
     
@@ -113,12 +117,12 @@ public class SwiftWebVC: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        updateToolbarItems()
     }
     
     override public func viewWillAppear(_ animated: Bool) {
         assert(self.navigationController != nil, "SVWebViewController needs to be contained in a UINavigationController. If you are presenting SVWebViewController modally, use SVModalWebViewController instead.")
         
+        updateToolbarItems()
         navBarTitle = UILabel()
         navBarTitle.backgroundColor = UIColor.clear
         if presentingViewController == nil {
@@ -163,7 +167,6 @@ public class SwiftWebVC: UIViewController {
     func updateToolbarItems() {
         backBarButtonItem.isEnabled = webView.canGoBack
         forwardBarButtonItem.isEnabled = webView.canGoForward
-        
         
         let refreshStopBarButtonItem: UIBarButtonItem = webView.isLoading ? stopBarButtonItem : refreshBarButtonItem
         
@@ -308,7 +311,6 @@ extension SwiftWebVC: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
-        
         let url = navigationAction.request.url
         
         let hostAddress = navigationAction.request.url?.host
@@ -318,7 +320,6 @@ extension SwiftWebVC: WKNavigationDelegate {
                 UIApplication.shared.openURL(url!)
             }
         }
-        decisionHandler(.allow)
         
         // To connnect app store
         if hostAddress == "itunes.apple.com" {
