@@ -348,7 +348,8 @@ extension SwiftWebVC: WKNavigationDelegate {
             decisionHandler(.cancel)
             
         default:
-            print("Default")
+            //print("Default")
+            break
         }
         
         decisionHandler(.allow)
