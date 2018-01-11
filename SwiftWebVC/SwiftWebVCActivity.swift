@@ -16,8 +16,8 @@ class SwiftWebVCActivity: UIActivity {
     
     override var activityType : UIActivityType? {
         let typeArray = "\(type(of: self))".components(separatedBy: ".")
-        let type: String = typeArray[typeArray.count-1]
-        return UIActivityType(rawValue: type)
+        let _type: String = typeArray[typeArray.count-1]
+        return UIActivityType(rawValue: _type)
     }
         
     override var activityImage : UIImage {
