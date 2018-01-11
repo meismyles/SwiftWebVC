@@ -88,20 +88,21 @@ public class SwiftWebVC: UIViewController {
         webView.navigationDelegate = nil;
     }
     
-    public convenience init(urlString: String) {
+    public convenience init(urlString: String, sharingEnabled: Bool = true) {
         var urlString = urlString
         if !urlString.hasPrefix("https://") && !urlString.hasPrefix("http://") {
             urlString = "https://"+urlString
         }
-        self.init(pageURL: URL(string: urlString)!)
+        self.init(pageURL: URL(string: urlString)!, sharingEnabled: sharingEnabled)
     }
     
-    public convenience init(pageURL: URL) {
-        self.init(aRequest: URLRequest(url: pageURL))
+    public convenience init(pageURL: URL, sharingEnabled: Bool = true) {
+        self.init(aRequest: URLRequest(url: pageURL), sharingEnabled: sharingEnabled)
     }
     
-    public convenience init(aRequest: URLRequest) {
+    public convenience init(aRequest: URLRequest, sharingEnabled: Bool = true) {
         self.init()
+        self.sharingEnabled = sharingEnabled
         self.request = aRequest
     }
     

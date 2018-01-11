@@ -19,12 +19,12 @@ public class SwiftModalWebVC: UINavigationController {
     
     weak var webViewDelegate: UIWebViewDelegate? = nil
     
-    public convenience init(urlString: String) {
+    public convenience init(urlString: String, sharingEnabled: Bool = true) {
         var urlString = urlString
         if !urlString.hasPrefix("https://") && !urlString.hasPrefix("http://") {
             urlString = "https://"+urlString
         }
-        self.init(pageURL: URL(string: urlString)!)
+        self.init(pageURL: URL(string: urlString)!, sharingEnabled: sharingEnabled)
     }
     
     public convenience init(urlString: String, theme: SwiftModalWebVCTheme, dismissButtonStyle: SwiftModalWebVCDismissButtonStyle, sharingEnabled: Bool = true) {
