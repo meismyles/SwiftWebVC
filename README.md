@@ -66,12 +66,26 @@ let webVC = SwiftModalWebVC(urlString: "http://google.com")
 self.present(webVC, animated: true, completion: nil)
 ```
 
-Note: the above code to present modally uses the default `Light-Blue` theme. The other modal themes `Light-Black` and `Dark` may be chosen using one of the following instead:
+### Options
+
+The share button can be disabled by passing a flag in to the constructor to specify this:
+```swift
+let webVC = SwiftWebVC(urlString: "http://google.com", sharingEnabled: false)
+```
+The same principal applies for the modal implementation also:
+```swift
+let webVC = SwiftModalWebVC(urlString: "http://google.com", sharingEnabled: false)
+```
+
+#### Modal Options Only
+Themes may be chosen for the modal implementation. The default theme is `Light-Blue`. Other modal themes `Light-Black` and `Dark` may be chosen using one of the following instead:
 
 ```swift
 let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: .lightBlack)
 let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: .dark)
 ```
+
+
 
 ## Delegate (Start/Finish Loading Callbacks)
 
