@@ -9,7 +9,7 @@ SwiftWebVC is a simple inline browser for your Swift iOS app.
 * iPhone and iPad distinct UIs
 * Full landscape orientation support
 * Back, forward, stop/refresh and share buttons
-* Open in Safari and Chrome UIActivities
+* Open in Safari, Chrome and Firefox Focus UIActivities
 * Navbar title set to the currently visible web page
 * Talks with `setNetworkActivityIndicatorVisible`
 * 3 different themes to choose from when presented modally
@@ -49,6 +49,18 @@ Run `carthage update` to build the framework and drag the built `SwiftWebVC.fram
 **Manual**
 
 * Add the `SwiftWebVC/` folder into your project.
+
+**Enabling activities**
+
+In order for the Chrome and Firefox Focus activities to work you need to allow your app to query their scheme in your `Info.plist`:
+
+````
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>firefox-focus</string>
+	<string>googlechrome</string>
+</array>
+````	
 
 ## Usage
 

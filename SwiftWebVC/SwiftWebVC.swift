@@ -237,7 +237,7 @@ public class SwiftWebVC: UIViewController {
     @objc func actionButtonTapped(_ sender: AnyObject) {
         
         if let url: URL = ((webView.url != nil) ? webView.url : request.url) {
-            let activities: NSArray = [SwiftWebVCActivitySafari(), SwiftWebVCActivityChrome()]
+            let activities: NSArray = [SwiftWebVCActivitySafari(), SwiftWebVCActivityChrome(), SwiftWebVCActivityFirefoxFocus()]
             
             if url.absoluteString.hasPrefix("file:///") {
                 let dc: UIDocumentInteractionController = UIDocumentInteractionController(url: url)

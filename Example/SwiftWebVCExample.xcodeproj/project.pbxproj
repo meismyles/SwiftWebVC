@@ -19,6 +19,7 @@
 		00FFF85E1E09977500015C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF85C1E09977500015C59 /* Main.storyboard */; };
 		00FFF8601E09977500015C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF85F1E09977500015C59 /* Assets.xcassets */; };
 		00FFF8631E09977500015C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF8611E09977500015C59 /* LaunchScreen.storyboard */; };
+		F39E90C72043F6E100B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39E90C62043F6E100B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		00FFF85F1E09977500015C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FFF8621E09977500015C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FFF8641E09977500015C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F39E90C62043F6E100B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivityFirefoxFocus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				0055F7A11E259F1A000ECD54 /* SwiftModalWebVC.swift */,
 				0055F7A21E259F1A000ECD54 /* SwiftWebVC.swift */,
 				0055F7A31E259F1A000ECD54 /* SwiftWebVCActivity.swift */,
+				F39E90C62043F6E100B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift */,
 				0055F7A41E259F1A000ECD54 /* SwiftWebVCActivityChrome.swift */,
 				0055F7A51E259F1A000ECD54 /* SwiftWebVCActivitySafari.swift */,
 			);
@@ -208,6 +211,7 @@
 				0055F7AB1E259F1A000ECD54 /* SwiftWebVCActivityChrome.swift in Sources */,
 				0055F7A81E259F1A000ECD54 /* SwiftModalWebVC.swift in Sources */,
 				00FFF85B1E09977500015C59 /* ViewController.swift in Sources */,
+				F39E90C72043F6E100B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift in Sources */,
 				0055F7AC1E259F1A000ECD54 /* SwiftWebVCActivitySafari.swift in Sources */,
 				00FFF8591E09977500015C59 /* AppDelegate.swift in Sources */,
 				0055F7A91E259F1A000ECD54 /* SwiftWebVC.swift in Sources */,
