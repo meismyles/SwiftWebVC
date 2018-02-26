@@ -50,6 +50,18 @@ Run `carthage update` to build the framework and drag the built `SwiftWebVC.fram
 
 * Add the `SwiftWebVC/` folder into your project.
 
+**Enabling activities**
+
+In order for the Chrome and Firefox Focus activities to work you need to allow your app to query their scheme in your `Info.plist`:
+
+````
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>firefox-focus</string>
+	<string>googlechrome</string>
+</array>
+````	
+
 ## Usage
 
 Just like any UIViewController, SwiftWebVC can be pushed into a UINavigationController stack:
