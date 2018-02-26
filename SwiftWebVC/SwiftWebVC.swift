@@ -8,14 +8,14 @@
 
 import WebKit
 
-public protocol SwiftWebVCDelegate: class {
+@objc public protocol SwiftWebVCDelegate: class {
     func didStartLoading()
     func didFinishLoading(success: Bool)
 }
 
 public class SwiftWebVC: UIViewController {
     
-    public weak var delegate: SwiftWebVCDelegate?
+    @objc public weak var delegate: SwiftWebVCDelegate?
     var storedStatusColor: UIBarStyle?
     var buttonColor: UIColor? = nil
     var titleColor: UIColor? = nil
@@ -88,7 +88,7 @@ public class SwiftWebVC: UIViewController {
         webView.navigationDelegate = nil;
     }
     
-    public convenience init(urlString: String, sharingEnabled: Bool = true) {
+    @objc public convenience init(urlString: String, sharingEnabled: Bool = true) {
         var urlString = urlString
         if !urlString.hasPrefix("https://") && !urlString.hasPrefix("http://") {
             urlString = "https://"+urlString
@@ -96,11 +96,11 @@ public class SwiftWebVC: UIViewController {
         self.init(pageURL: URL(string: urlString)!, sharingEnabled: sharingEnabled)
     }
     
-    public convenience init(pageURL: URL, sharingEnabled: Bool = true) {
+    @objc public convenience init(pageURL: URL, sharingEnabled: Bool = true) {
         self.init(aRequest: URLRequest(url: pageURL), sharingEnabled: sharingEnabled)
     }
-    
-    public convenience init(aRequest: URLRequest, sharingEnabled: Bool = true) {
+	
+	@objc public convenience init(aRequest: URLRequest, sharingEnabled: Bool = true) {
         self.init()
         self.sharingEnabled = sharingEnabled
         self.request = aRequest
@@ -163,6 +163,14 @@ public class SwiftWebVC: UIViewController {
         super.viewDidDisappear(true)
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
+	
+	public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+		super.viewWillTransition(to: size, with: coordinator)
+		
+		coordinator.animate(alongsideTransition: nil) { [weak self] context in
+			self?.updateBottomInset() //Fix the bottom insets after rotating the device
+		}
+	}
     
     ////////////////////////////////////////////////
     // Toolbar
@@ -211,8 +219,13 @@ public class SwiftWebVC: UIViewController {
                 toolbarItems = items as? [UIBarButtonItem]
             }
         }
+		updateBottomInset()
     }
-    
+	
+	func updateBottomInset() {
+		// Leave space for the toolbar at the bottom
+		webView.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: navigationController?.toolbar.frame.height ?? 0, right: 0)
+	}
     
     ////////////////////////////////////////////////
     // Target Actions
@@ -354,7 +367,6 @@ extension SwiftWebVC: WKNavigationDelegate {
         }
         
         decisionHandler(.allow)
-        
     }
     
     func openCustomApp(urlScheme: String, additional_info:String){

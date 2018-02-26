@@ -19,6 +19,7 @@
 		00FFF85E1E09977500015C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF85C1E09977500015C59 /* Main.storyboard */; };
 		00FFF8601E09977500015C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF85F1E09977500015C59 /* Assets.xcassets */; };
 		00FFF8631E09977500015C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00FFF8611E09977500015C59 /* LaunchScreen.storyboard */; };
+		C7F2B30A2044309100DB7E6D /* ObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F2B3092044309100DB7E6D /* ObjcViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,9 @@
 		00FFF85F1E09977500015C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FFF8621E09977500015C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00FFF8641E09977500015C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7F2B3072044309100DB7E6D /* SwiftWebVCExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftWebVCExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7F2B3082044309100DB7E6D /* ObjcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcViewController.h; sourceTree = "<group>"; };
+		C7F2B3092044309100DB7E6D /* ObjcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +120,19 @@
 				00FFF85F1E09977500015C59 /* Assets.xcassets */,
 				00FFF8611E09977500015C59 /* LaunchScreen.storyboard */,
 				00FFF8641E09977500015C59 /* Info.plist */,
+				C7F2B30C20444D3200DB7E6D /* Objective C VC */,
 			);
 			path = SwiftWebVCExample;
+			sourceTree = "<group>";
+		};
+		C7F2B30C20444D3200DB7E6D /* Objective C VC */ = {
+			isa = PBXGroup;
+			children = (
+				C7F2B3082044309100DB7E6D /* ObjcViewController.h */,
+				C7F2B3092044309100DB7E6D /* ObjcViewController.m */,
+				C7F2B3072044309100DB7E6D /* SwiftWebVCExample-Bridging-Header.h */,
+			);
+			name = "Objective C VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +224,7 @@
 				0055F7A81E259F1A000ECD54 /* SwiftModalWebVC.swift in Sources */,
 				00FFF85B1E09977500015C59 /* ViewController.swift in Sources */,
 				0055F7AC1E259F1A000ECD54 /* SwiftWebVCActivitySafari.swift in Sources */,
+				C7F2B30A2044309100DB7E6D /* ObjcViewController.m in Sources */,
 				00FFF8591E09977500015C59 /* AppDelegate.swift in Sources */,
 				0055F7A91E259F1A000ECD54 /* SwiftWebVC.swift in Sources */,
 				0055F7AA1E259F1A000ECD54 /* SwiftWebVCActivity.swift in Sources */,
@@ -366,11 +382,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftWebVCExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftweb.SwiftWebVCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWebVCExample/SwiftWebVCExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -379,11 +398,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftWebVCExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftweb.SwiftWebVCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWebVCExample/SwiftWebVCExample-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
