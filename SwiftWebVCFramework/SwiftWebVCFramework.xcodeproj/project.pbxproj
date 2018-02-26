@@ -15,6 +15,7 @@
 		B9C1B7FF1E5E4518001B0A2D /* SwiftWebVCActivitySafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C1B7F61E5E442F001B0A2D /* SwiftWebVCActivitySafari.swift */; };
 		B9C1B8001E5E4525001B0A2D /* SwiftWebVC.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9C1B7E61E5E442F001B0A2D /* SwiftWebVC.strings */; };
 		B9C1B8011E5E452B001B0A2D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C1B7E41E5E442F001B0A2D /* Media.xcassets */; };
+		F39E90C92043FF1C00B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39E90C82043FF1C00B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B9C1B7F41E5E442F001B0A2D /* SwiftWebVCActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivity.swift; sourceTree = "<group>"; };
 		B9C1B7F51E5E442F001B0A2D /* SwiftWebVCActivityChrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivityChrome.swift; sourceTree = "<group>"; };
 		B9C1B7F61E5E442F001B0A2D /* SwiftWebVCActivitySafari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivitySafari.swift; sourceTree = "<group>"; };
+		F39E90C82043FF1C00B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebVCActivityFirefoxFocus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				B9C1B7F21E5E442F001B0A2D /* SwiftModalWebVC.swift */,
 				B9C1B7F31E5E442F001B0A2D /* SwiftWebVC.swift */,
 				B9C1B7F41E5E442F001B0A2D /* SwiftWebVCActivity.swift */,
+				F39E90C82043FF1C00B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift */,
 				B9C1B7F51E5E442F001B0A2D /* SwiftWebVCActivityChrome.swift */,
 				B9C1B7F61E5E442F001B0A2D /* SwiftWebVCActivitySafari.swift */,
 			);
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C1B7FB1E5E4518001B0A2D /* SwiftModalWebVC.swift in Sources */,
+				F39E90C92043FF1C00B54BD9 /* SwiftWebVCActivityFirefoxFocus.swift in Sources */,
 				B9C1B7FC1E5E4518001B0A2D /* SwiftWebVC.swift in Sources */,
 				B9C1B7FD1E5E4518001B0A2D /* SwiftWebVCActivity.swift in Sources */,
 				B9C1B7FE1E5E4518001B0A2D /* SwiftWebVCActivityChrome.swift in Sources */,
