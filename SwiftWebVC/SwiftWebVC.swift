@@ -107,7 +107,13 @@ public class SwiftWebVC: UIViewController {
     }
     
     func loadRequest(_ request: URLRequest) {
-        webView.load(request)
+        if let url = request.url,
+            url.absoluteString.contains("file:"),
+            #available(iOS 9.0, *) {
+                webView.loadFileURL(url, allowingReadAccessTo: url)
+        } else {
+            webView.load(request)
+        }
     }
     
     ////////////////////////////////////////////////
