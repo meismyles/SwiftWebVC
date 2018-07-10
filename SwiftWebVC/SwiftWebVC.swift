@@ -79,6 +79,8 @@ public class SwiftWebVC: UIViewController {
     
     var sharingEnabled = true
     
+    var hideToolBar: Bool = false
+    
     ////////////////////////////////////////////////
     
     deinit {
@@ -88,22 +90,23 @@ public class SwiftWebVC: UIViewController {
         webView.navigationDelegate = nil;
     }
     
-    public convenience init(urlString: String, sharingEnabled: Bool = true) {
+    public convenience init(urlString: String, sharingEnabled: Bool = true, hideToolBar: Bool = false) {
         var urlString = urlString
         if !urlString.hasPrefix("https://") && !urlString.hasPrefix("http://") {
             urlString = "https://"+urlString
         }
-        self.init(pageURL: URL(string: urlString)!, sharingEnabled: sharingEnabled)
+        self.init(pageURL: URL(string: urlString)!, sharingEnabled: sharingEnabled, hideToolBar: hideToolBar)
     }
     
-    public convenience init(pageURL: URL, sharingEnabled: Bool = true) {
-        self.init(aRequest: URLRequest(url: pageURL), sharingEnabled: sharingEnabled)
+    public convenience init(pageURL: URL, sharingEnabled: Bool = true, hideToolBar: Bool = false) {
+        self.init(aRequest: URLRequest(url: pageURL), sharingEnabled: sharingEnabled, hideToolBar: hideToolBar)
     }
     
-    public convenience init(aRequest: URLRequest, sharingEnabled: Bool = true) {
+    public convenience init(aRequest: URLRequest, sharingEnabled: Bool = true, hideToolBar: Bool = false) {
         self.init()
         self.sharingEnabled = sharingEnabled
         self.request = aRequest
+        self.hideToolBar = hideToolBar
     }
     
     func loadRequest(_ request: URLRequest) {
@@ -145,7 +148,7 @@ public class SwiftWebVC: UIViewController {
         super.viewWillAppear(true)
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone) {
-            self.navigationController?.setToolbarHidden(false, animated: false)
+            self.navigationController?.setToolbarHidden(self.hideToolBar, animated: false)
         }
         else if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
             self.navigationController?.setToolbarHidden(true, animated: true)
@@ -169,6 +172,9 @@ public class SwiftWebVC: UIViewController {
     // Toolbar
     
     func updateToolbarItems() {
+        guard hideToolBar == false else {
+            return
+        }
         backBarButtonItem.isEnabled = webView.canGoBack
         forwardBarButtonItem.isEnabled = webView.canGoForward
         

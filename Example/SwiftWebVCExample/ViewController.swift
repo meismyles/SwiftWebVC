@@ -27,6 +27,12 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(webVC, animated: true)
     }
     
+    @IBAction func pushWithoutToolBar() {
+        let webVC = SwiftWebVC(urlString: "https://www.google.com", hideToolBar: true)
+        webVC.delegate = self
+        self.navigationController?.pushViewController(webVC, animated: true)
+    }
+    
     // MARK: Modal
     @IBAction func presentModalWithDefaultTheme() {
         let webVC = SwiftModalWebVC(urlString: "www.google.com")
