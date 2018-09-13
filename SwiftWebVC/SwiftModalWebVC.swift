@@ -46,7 +46,7 @@ public class SwiftModalWebVC: UINavigationController {
         
         let dismissButtonImageName = (dismissButtonStyle == .arrow) ? "SwiftWebVCDismiss" : "SwiftWebVCDismissAlt"
         let doneButton = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: dismissButtonImageName),
-                                         style: UIBarButtonItemStyle.plain,
+                                         style: UIBarButtonItem.Style.plain,
                                          target: webViewController,
                                          action: #selector(SwiftWebVC.doneButtonTapped))
         
