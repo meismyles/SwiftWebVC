@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBAction func push() {
         let webVC = SwiftWebVC(urlString: "https://www.google.com")
         webVC.delegate = self
+        webVC.title = "test title"
         self.navigationController?.pushViewController(webVC, animated: true)
     }
     

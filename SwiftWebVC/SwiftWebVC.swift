@@ -304,13 +304,18 @@ extension SwiftWebVC: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.delegate?.didFinishLoading(success: true)
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        
-        webView.evaluateJavaScript("document.title", completionHandler: {(response, error) in
-            self.navBarTitle.text = response as! String?
+
+        if let title = self.title {
+            self.navBarTitle.text = title
             self.navBarTitle.sizeToFit()
             self.updateToolbarItems()
-        })
-        
+        }else{
+            webView.evaluateJavaScript("document.title", completionHandler: {(response, error) in
+                self.navBarTitle.text = response as! String?
+                self.navBarTitle.sizeToFit()
+                self.updateToolbarItems()
+            })
+        }
     }
     
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
