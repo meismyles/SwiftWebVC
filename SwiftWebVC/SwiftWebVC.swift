@@ -23,7 +23,7 @@ public class SwiftWebVC: UIViewController {
     
     lazy var backBarButtonItem: UIBarButtonItem =  {
         var tempBackBarButtonItem = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: "SwiftWebVCBack"),
-                                                    style: UIBarButtonItemStyle.plain,
+                                                    style: UIBarButtonItem.Style.plain,
                                                     target: self,
                                                     action: #selector(SwiftWebVC.goBackTapped(_:)))
         tempBackBarButtonItem.width = 18.0
@@ -33,7 +33,7 @@ public class SwiftWebVC: UIViewController {
     
     lazy var forwardBarButtonItem: UIBarButtonItem =  {
         var tempForwardBarButtonItem = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: "SwiftWebVCNext"),
-                                                       style: UIBarButtonItemStyle.plain,
+                                                       style: UIBarButtonItem.Style.plain,
                                                        target: self,
                                                        action: #selector(SwiftWebVC.goForwardTapped(_:)))
         tempForwardBarButtonItem.width = 18.0
@@ -42,7 +42,7 @@ public class SwiftWebVC: UIViewController {
     }()
     
     lazy var refreshBarButtonItem: UIBarButtonItem = {
-        var tempRefreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh,
+        var tempRefreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh,
                                                        target: self,
                                                        action: #selector(SwiftWebVC.reloadTapped(_:)))
         tempRefreshBarButtonItem.tintColor = self.buttonColor
@@ -50,7 +50,7 @@ public class SwiftWebVC: UIViewController {
     }()
     
     lazy var stopBarButtonItem: UIBarButtonItem = {
-        var tempStopBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.stop,
+        var tempStopBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop,
                                                     target: self,
                                                     action: #selector(SwiftWebVC.stopTapped(_:)))
         tempStopBarButtonItem.tintColor = self.buttonColor
@@ -58,7 +58,7 @@ public class SwiftWebVC: UIViewController {
     }()
     
     lazy var actionBarButtonItem: UIBarButtonItem = {
-        var tempActionBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action,
+        var tempActionBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action,
                                                       target: self,
                                                       action: #selector(SwiftWebVC.actionButtonTapped(_:)))
         tempActionBarButtonItem.tintColor = self.buttonColor
@@ -79,6 +79,8 @@ public class SwiftWebVC: UIViewController {
     
     var sharingEnabled = true
     
+    var hideToolBar: Bool = false
+    
     ////////////////////////////////////////////////
     
     deinit {
@@ -88,22 +90,23 @@ public class SwiftWebVC: UIViewController {
         webView.navigationDelegate = nil;
     }
     
-    public convenience init(urlString: String, sharingEnabled: Bool = true) {
+    public convenience init(urlString: String, sharingEnabled: Bool = true, hideToolBar: Bool = false) {
         var urlString = urlString
         if !urlString.hasPrefix("https://") && !urlString.hasPrefix("http://") {
             urlString = "https://"+urlString
         }
-        self.init(pageURL: URL(string: urlString)!, sharingEnabled: sharingEnabled)
+        self.init(pageURL: URL(string: urlString)!, sharingEnabled: sharingEnabled, hideToolBar: hideToolBar)
     }
     
-    public convenience init(pageURL: URL, sharingEnabled: Bool = true) {
-        self.init(aRequest: URLRequest(url: pageURL), sharingEnabled: sharingEnabled)
+    public convenience init(pageURL: URL, sharingEnabled: Bool = true, hideToolBar: Bool = false) {
+        self.init(aRequest: URLRequest(url: pageURL), sharingEnabled: sharingEnabled, hideToolBar: hideToolBar)
     }
     
-    public convenience init(aRequest: URLRequest, sharingEnabled: Bool = true) {
+    public convenience init(aRequest: URLRequest, sharingEnabled: Bool = true, hideToolBar: Bool = false) {
         self.init()
         self.sharingEnabled = sharingEnabled
         self.request = aRequest
+        self.hideToolBar = hideToolBar
     }
     
     func loadRequest(_ request: URLRequest) {
@@ -129,8 +132,9 @@ public class SwiftWebVC: UIViewController {
         navBarTitle = UILabel()
         navBarTitle.backgroundColor = UIColor.clear
         if presentingViewController == nil {
-            if let titleAttributes = navigationController!.navigationBar.titleTextAttributes {
-                navBarTitle.textColor = titleAttributes[.foregroundColor] as? UIColor
+            
+            if let titleAttributes = navigationController!.navigationBar.titleTextAttributes as [NSAttributedString.Key : Any]? {
+                navBarTitle.textColor = titleAttributes[NSAttributedString.Key.foregroundColor] as? UIColor
             }
         }
         else {
@@ -144,7 +148,7 @@ public class SwiftWebVC: UIViewController {
         super.viewWillAppear(true)
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone) {
-            self.navigationController?.setToolbarHidden(false, animated: false)
+            self.navigationController?.setToolbarHidden(self.hideToolBar, animated: false)
         }
         else if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
             self.navigationController?.setToolbarHidden(true, animated: true)
@@ -168,13 +172,16 @@ public class SwiftWebVC: UIViewController {
     // Toolbar
     
     func updateToolbarItems() {
+        guard hideToolBar == false else {
+            return
+        }
         backBarButtonItem.isEnabled = webView.canGoBack
         forwardBarButtonItem.isEnabled = webView.canGoForward
         
         let refreshStopBarButtonItem: UIBarButtonItem = webView.isLoading ? stopBarButtonItem : refreshBarButtonItem
         
-        let fixedSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
-        let flexibleSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let fixedSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.fixedSpace, target: nil, action: nil)
+        let flexibleSpace: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
             
@@ -297,13 +304,18 @@ extension SwiftWebVC: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.delegate?.didFinishLoading(success: true)
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        
-        webView.evaluateJavaScript("document.title", completionHandler: {(response, error) in
-            self.navBarTitle.text = response as! String?
+
+        if let title = self.title {
+            self.navBarTitle.text = title
             self.navBarTitle.sizeToFit()
             self.updateToolbarItems()
-        })
-        
+        }else{
+            webView.evaluateJavaScript("document.title", completionHandler: {(response, error) in
+                self.navBarTitle.text = response as! String?
+                self.navBarTitle.sizeToFit()
+                self.updateToolbarItems()
+            })
+        }
     }
     
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
