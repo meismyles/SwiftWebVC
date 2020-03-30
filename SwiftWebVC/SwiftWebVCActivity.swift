@@ -14,10 +14,10 @@ class SwiftWebVCActivity: UIActivity {
     var URLToOpen: URL?
     var schemePrefix: String?
     
-    override var activityType : UIActivityType? {
+    override var activityType : UIActivity.ActivityType? {
         let typeArray = "\(type(of: self))".components(separatedBy: ".")
         let _type: String = typeArray[typeArray.count-1]
-        return UIActivityType(rawValue: _type)
+        return UIActivity.ActivityType(rawValue: _type)
     }
         
     override var activityImage : UIImage {
