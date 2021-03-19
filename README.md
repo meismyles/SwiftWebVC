@@ -10,7 +10,7 @@ SwiftWebVC is a simple inline browser for your Swift iOS app.
 * Full landscape orientation support
 * Back, forward, stop/refresh and share buttons
 * Open in Safari and Chrome UIActivities
-* Navbar title set to the currently visible web page
+* Navbar title set to the currently visible web page or address bar for navigation
 * Talks with `setNetworkActivityIndicatorVisible`
 * 3 different themes to choose from when presented modally
 
