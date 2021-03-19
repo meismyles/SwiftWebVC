@@ -10,7 +10,7 @@ SwiftWebVC is a simple inline browser for your Swift iOS app.
 * Full landscape orientation support
 * Back, forward, stop/refresh and share buttons
 * Open in Safari and Chrome UIActivities
-* Navbar title set to the currently visible web page
+* Navbar title set to the currently visible web page or address bar for navigation
 * Talks with `setNetworkActivityIndicatorVisible`
 * 3 different themes to choose from when presented modally
 
@@ -68,13 +68,17 @@ self.present(webVC, animated: true, completion: nil)
 
 ### Options
 
+The address bar can be replaced with the site title by passing a flag in to the constructor:
+```swift
+let webVC = SwiftWebVC(urlString: "http://google.com", showAddressBar: false)
+```
 The share button can be disabled by passing a flag in to the constructor to specify this:
 ```swift
 let webVC = SwiftWebVC(urlString: "http://google.com", sharingEnabled: false)
 ```
 The same principal applies for the modal implementation also:
 ```swift
-let webVC = SwiftModalWebVC(urlString: "http://google.com", sharingEnabled: false)
+let webVC = SwiftModalWebVC(urlString: "http://google.com", sharingEnabled: false, showAddressBar: true)
 ```
 
 #### Modal Options Only
@@ -84,8 +88,6 @@ Themes may be chosen for the modal implementation. The default theme is `Light-B
 let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: .lightBlack)
 let webVC = SwiftModalWebVC(urlString: "http://google.com", theme: .dark)
 ```
-
-
 
 ## Delegate (Start/Finish Loading Callbacks)
 

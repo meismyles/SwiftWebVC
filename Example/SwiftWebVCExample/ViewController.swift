@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    fileprivate let testUrlString = "https://www.google.com"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,24 +24,24 @@ class ViewController: UIViewController {
 
     // MARK: Push
     @IBAction func push() {
-        let webVC = SwiftWebVC(urlString: "https://www.google.com")
+        let webVC = SwiftWebVC(urlString: testUrlString)
         webVC.delegate = self
         self.navigationController?.pushViewController(webVC, animated: true)
     }
     
     // MARK: Modal
     @IBAction func presentModalWithDefaultTheme() {
-        let webVC = SwiftModalWebVC(urlString: "www.google.com")
+        let webVC = SwiftModalWebVC(urlString: testUrlString)
         self.present(webVC, animated: true, completion: nil)
     }
     
     @IBAction func presentModalWithLightBlackTheme() {
-        let webVC = SwiftModalWebVC(urlString: "https://www.google.com", theme: .lightBlack, dismissButtonStyle: .cross)
+        let webVC = SwiftModalWebVC(urlString: testUrlString, theme: .lightBlack, dismissButtonStyle: .cross)
         self.present(webVC, animated: true, completion: nil)
     }
     
     @IBAction func presentModalWithDarkTheme() {
-        let webVC = SwiftModalWebVC(urlString: "https://www.google.com", theme: .dark, dismissButtonStyle: .arrow)
+        let webVC = SwiftModalWebVC(urlString: testUrlString, theme: .dark, dismissButtonStyle: .arrow)
         self.present(webVC, animated: true, completion: nil)
     }
 
@@ -48,10 +50,10 @@ class ViewController: UIViewController {
 extension ViewController: SwiftWebVCDelegate {
     
     func didStartLoading() {
-        print("Started loading.")
+        debugPrint("Started loading.")
     }
     
     func didFinishLoading(success: Bool) {
-        print("Finished loading. Success: \(success).")
+        debugPrint("Finished loading. Success: \(success).")
     }
 }
