@@ -379,15 +379,15 @@ extension SwiftWebVC: WKNavigationDelegate {
         let hostAddress = navigationAction.request.url?.host
         
         if (navigationAction.targetFrame == nil) {
-            if UIApplication.shared.canOpenURL(url!) {
-                UIApplication.shared.openURL(url!)
+            if let url = url, UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }
         
         // To connnect app store
         if hostAddress == "itunes.apple.com" {
-            if UIApplication.shared.canOpenURL(navigationAction.request.url!) {
-                UIApplication.shared.openURL(navigationAction.request.url!)
+            if let url = navigationAction.request.url, UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 decisionHandler(.cancel)
                 return
             }
@@ -422,7 +422,7 @@ extension SwiftWebVC: WKNavigationDelegate {
         if let requestUrl: URL = URL(string:"\(urlScheme)"+"\(additional_info)") {
             let application:UIApplication = UIApplication.shared
             if application.canOpenURL(requestUrl) {
-                application.openURL(requestUrl)
+                application.open(requestUrl, options: [:], completionHandler: nil)
             }
         }
     }

@@ -24,28 +24,25 @@ class SwiftWebVCActivityChrome : SwiftWebVCActivity {
     }
     
     override func perform() {
-        let inputURL: URL! = URLToOpen as URL!
-        let scheme: String! = inputURL.scheme
         
-        // Replace the URL Scheme with the Chrome equivalent.
-        var chromeScheme: String? = nil;
-        if scheme == "http" {
-            chromeScheme = "googlechrome"
+        guard let url = urlToOpen else {
+            return
         }
-        else if scheme == "https" {
-            chromeScheme = "googlechromes"
+         
+        var urlString = url.absoluteString
+        
+        let httpScheme = "http"
+        
+        if urlString.hasPrefix(httpScheme) {
+            urlString = String(urlString.dropFirst(httpScheme.count))
         }
         
-        // Proceed only if a valid Google Chrome URI Scheme is available.
-        if chromeScheme != nil {
-            let absoluteString: NSString! = inputURL!.absoluteString as NSString!
-            let rangeForScheme: NSRange! = absoluteString.range(of: ":")
-            let urlNoScheme: String! = absoluteString.substring(from: rangeForScheme.location)
-            let chromeURLString: String! = chromeScheme!+urlNoScheme
-            let chromeURL: URL! = URL(string: chromeURLString)
-            
-            // Open the URL with Chrome.
-            UIApplication.shared.openURL(chromeURL)
+        guard let currentUrl = URL(string: urlString) else {
+            return
+        }
+        
+        if UIApplication.shared.canOpenURL(currentUrl) {
+            UIApplication.shared.open(currentUrl, options: [:], completionHandler: nil)
         }
     }
     

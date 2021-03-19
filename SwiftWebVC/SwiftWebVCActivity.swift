@@ -11,7 +11,8 @@ import UIKit
 
 class SwiftWebVCActivity: UIActivity {
 
-    var URLToOpen: URL?
+    var urlToOpen: URL?
+    
     var schemePrefix: String?
     
     override var activityType : UIActivityType? {
@@ -33,7 +34,7 @@ class SwiftWebVCActivity: UIActivity {
     override func prepare(withActivityItems activityItems: [Any]) {
         for activityItem in activityItems {
             if activityItem is URL {
-                URLToOpen = activityItem as? URL
+                urlToOpen = activityItem as? URL
             }
         }
     }
